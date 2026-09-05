@@ -6,8 +6,28 @@
  */
 
 get_header();
-?>
 
+$is_elementor = false;
+if ( isset( $_GET['elementor-preview'] ) || ( isset( $_GET['action'] ) && $_GET['action'] === 'elementor' ) ) {
+    $is_elementor = true;
+}
+if ( class_exists( '\Elementor\Plugin' ) ) {
+    if ( \Elementor\Plugin::$instance->preview->is_preview_mode() || \Elementor\Plugin::$instance->editor->is_edit_mode() || \Elementor\Plugin::$instance->db->is_built_with_elementor( get_the_ID() ) ) {
+        $is_elementor = true;
+    }
+}
+
+if ( $is_elementor ) :
+?>
+<main id="primary" class="site-main nexora-elementor-canvas">
+    <?php
+    while ( have_posts() ) :
+        the_post();
+        the_content();
+    endwhile;
+    ?>
+</main>
+<?php else : ?>
 <main id="primary" class="site-main">
     <!-- Luxury Page Hero Banner -->
     <section style="background-color: var(--color-charcoal-dark); color: #fff; padding: 3.25rem 0; border-bottom: 1px solid rgba(212,168,67,0.3);">
@@ -44,6 +64,7 @@ get_header();
         </div>
     </section>
 </main>
+<?php endif; ?>
 
 <?php
 get_footer();
