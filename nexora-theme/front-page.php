@@ -3,45 +3,62 @@
  * Template Name: Front Page Luxury Template
  *
  * The template for displaying the luxury front page / home page of Nexora Mall.
- * Fully compatible with Elementor drag-and-drop builder with fallback.
+ * Fully compatible with Elementor drag-and-drop builder with luxury fallback.
  *
  * @package Nexora_Mall
  */
 
 get_header();
 
-// Detect if Elementor is in editor mode, preview mode, or page was built with Elementor
-$is_elementor = false;
+// 1. Check if we are currently inside the Elementor Live Editor or Preview Mode
+$is_elementor_editor = false;
 if ( isset( $_GET['elementor-preview'] ) || ( isset( $_GET['action'] ) && $_GET['action'] === 'elementor' ) ) {
-    $is_elementor = true;
+    $is_elementor_editor = true;
 }
 if ( class_exists( '\Elementor\Plugin' ) ) {
-    if ( \Elementor\Plugin::$instance->preview->is_preview_mode() || \Elementor\Plugin::$instance->editor->is_edit_mode() || \Elementor\Plugin::$instance->db->is_built_with_elementor( get_the_ID() ) ) {
-        $is_elementor = true;
+    if ( \Elementor\Plugin::$instance->preview->is_preview_mode() || \Elementor\Plugin::$instance->editor->is_edit_mode() ) {
+        $is_elementor_editor = true;
     }
 }
 
-$has_page_content = false;
+// 2. Check if the page has actual published custom content (Elementor widgets or Gutenberg blocks)
+$has_custom_content = false;
 if ( have_posts() ) {
     while ( have_posts() ) {
         the_post();
-        $raw_c = get_the_content();
-        if ( $is_elementor || ! empty( trim( $raw_c ) ) ) {
-            $has_page_content = true;
-            ?>
-            <main id="primary" class="site-main nexora-elementor-content">
-                <?php the_content(); ?>
-            </main>
-            <?php
+        $elementor_data = get_post_meta( get_the_ID(), '_elementor_data', true );
+        $raw_content = get_the_content();
+        $plain_content = trim( strip_tags( $raw_content ) );
+        
+        // Elementor has actual widgets saved if JSON length > 20 and not empty array '[]'
+        if ( ! empty( $elementor_data ) && $elementor_data !== '[]' && $elementor_data !== '""' && strlen( trim( $elementor_data ) ) > 20 ) {
+            $has_custom_content = true;
+        } elseif ( ! empty( $plain_content ) ) {
+            $has_custom_content = true;
         }
     }
+    rewind_posts();
 }
 
-if ( ! $has_page_content ) :
+// IF IN ELEMENTOR EDITOR OR PAGE HAS CUSTOM CONTENT: Show the dynamic WordPress content
+if ( $is_elementor_editor || $has_custom_content ) :
+?>
+<main id="primary" class="site-main nexora-elementor-content">
+    <?php
+    if ( have_posts() ) :
+        while ( have_posts() ) : the_post();
+            the_content();
+        endwhile;
+    endif;
+    ?>
+</main>
+<?php
+else :
+// OTHERWISE: Display the full luxury built-in homepage layout with all sections
 ?>
 <main id="primary" class="site-main">
 
-    <!-- 1. HERO SLIDER CAROUSEL -->
+        <!-- 1. HERO SLIDER CAROUSEL -->
     <section class="hero-slider-section" aria-label="<?php esc_attr_e( 'Featured Collections Carousel', 'nexora-mall' ); ?>">
         <div class="hero-slider-wrap">
             <!-- Slide 1 -->
