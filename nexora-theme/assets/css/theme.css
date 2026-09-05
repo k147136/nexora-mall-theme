@@ -2459,3 +2459,147 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #f8fafc !important;
   padding-left: 1.6rem !important;
 }
+
+
+/* ==========================================================================
+   MOBILE HEADER DEDICATED OPTIMIZATIONS (100% Fit, Zero Overflow)
+   ========================================================================== */
+@media (min-width: 992px) {
+  .mobile-menu-toggle {
+    display: none !important;
+  }
+}
+
+@media (max-width: 991px) {
+  .announcement-bar {
+    font-size: 0.72rem !important;
+    padding: 0.35rem 0 !important;
+  }
+  .announcement-inner {
+    justify-content: center !important;
+    text-align: center !important;
+  }
+  .announcement-links {
+    display: none !important;
+  }
+
+  .site-header {
+    width: 100% !important;
+    max-width: 100vw !important;
+    overflow-x: hidden !important;
+  }
+
+  .header-main {
+    height: 64px !important;
+    gap: 0.5rem !important;
+    padding: 0 0.75rem !important;
+    justify-content: space-between !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .mobile-menu-toggle {
+    display: inline-flex !important;
+    width: 36px !important;
+    height: 36px !important;
+    font-size: 1.15rem !important;
+    flex-shrink: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  .brand-logo {
+    margin: 0 !important;
+    flex-shrink: 1 !important;
+    max-width: calc(100% - 150px) !important;
+    overflow: hidden !important;
+  }
+
+  .brand-title {
+    font-size: 1.35rem !important;
+    letter-spacing: 0.03em !important;
+    line-height: 1.05 !important;
+    white-space: nowrap !important;
+  }
+
+  .brand-logo .logo-tag {
+    font-size: 0.5rem !important;
+    letter-spacing: 0.14em !important;
+    white-space: nowrap !important;
+  }
+
+  .header-actions {
+    display: flex !important;
+    align-items: center !important;
+    gap: 0.35rem !important;
+    flex-shrink: 0 !important;
+  }
+
+  .header-actions .action-btn {
+    width: 34px !important;
+    height: 34px !important;
+    font-size: 0.95rem !important;
+    padding: 0 !important;
+  }
+
+  .cart-header-cta {
+    padding: 0.4rem 0.65rem !important;
+    font-size: 0.75rem !important;
+    gap: 0.35rem !important;
+    border-radius: 50px !important;
+  }
+
+  .cart-header-cta span:not(.action-count-badge) {
+    display: none !important;
+  }
+
+  .nav-bar {
+    display: none !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-main {
+    height: 58px !important;
+    padding: 0 0.5rem !important;
+    gap: 0.35rem !important;
+  }
+
+  .mobile-menu-toggle {
+    width: 32px !important;
+    height: 32px !important;
+    font-size: 1.05rem !important;
+  }
+
+  .brand-title {
+    font-size: 1.15rem !important;
+  }
+
+  .brand-logo .logo-tag {
+    font-size: 0.42rem !important;
+    letter-spacing: 0.1em !important;
+  }
+
+  .header-actions {
+    gap: 0.2rem !important;
+  }
+
+  .header-actions .action-btn {
+    width: 30px !important;
+    height: 30px !important;
+    font-size: 0.85rem !important;
+  }
+
+  .header-actions a[aria-label*="Wishlist"],
+  .header-actions a[aria-label*="Account"],
+  .header-actions a[title*="Wishlist"],
+  .header-actions a[title*="Account"] {
+    display: none !important;
+  }
+
+  .cart-header-cta {
+    padding: 0.35rem 0.55rem !important;
+  }
+}
