@@ -1,18 +1,34 @@
-/*
-Theme Name: Nexora Mall
-Theme URI: https://themetest.appliancesnest.com/
-Author: Nexora Luxury Studio
-Author URI: https://themetest.appliancesnest.com/
-Description: Nexora Mall is a luxury multi-purpose eCommerce and marketplace theme for WordPress and WooCommerce. Built with clean code, elegant Charcoal and Gold design system, Elementor compatibility, and rich e-commerce features.
-Version: 1.0.0
-Requires at least: 5.8
-Tested up to: 6.5
-Requires PHP: 7.4
-License: GNU General Public License v2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: nexora-mall
-Tags: e-commerce, custom-colors, custom-menu, custom-logo, featured-images, full-width-template, theme-options, translation-ready
-*/
+
+/* Brand Logo Container & Image */
+.brand-logo-wrap {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.brand-logo-wrap .custom-logo-link,
+.brand-logo-wrap .brand-logo {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.brand-logo-wrap img.custom-logo,
+.brand-logo-wrap img.site-logo-img,
+.brand-logo img {
+  max-width: 220px;
+  max-height: 46px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  transition: transform var(--transition);
+}
+
+.brand-logo-wrap .custom-logo-link:hover img,
+.brand-logo-wrap .brand-logo:hover img {
+  transform: scale(1.02);
+}
 
 /* ==========================================================================
    NEXORA MALL - MASTER STYLESHEET (ELEGANT & LUXURY DESIGN SYSTEM)
@@ -851,25 +867,6 @@ h1, h2, h3, h4, h5, h6 {
   gap: 1.5rem;
 }
 
-@media (max-width: 1200px) {
-  .products-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-@media (max-width: 768px) {
-  .products-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .products-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
 .product-card {
   background-color: var(--bg-card);
   border: 1px solid var(--border-color);
@@ -900,7 +897,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .product-img-wrap {
   width: 100%;
-  aspect-ratio: 1 / 1;
+  height: 250px;
   background-color: var(--bg-secondary);
   overflow: hidden;
   position: relative;
@@ -913,7 +910,6 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center;
   transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -2252,114 +2248,114 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ==========================================================================
-   10. EDITORIAL & LUXURY BLOG SECTION (3-IN-1 ROW CONTAINER)
+   10. EDITORIAL & LUXURY BLOG SECTION
    ========================================================================== */
 .blog-section {
-  padding: 4.5rem 0 !important;
-  background-color: var(--bg-secondary) !important;
-  border-top: 1px solid var(--border-color) !important;
-  border-bottom: 1px solid var(--border-color) !important;
+  padding: 4.5rem 0;
+  background-color: var(--bg-secondary);
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
 }
 
 .blog-box-container {
-  background: #ffffff !important;
-  border: 1px solid #dce4ec !important;
-  border-radius: var(--radius-sm) !important;
-  padding: 1.5rem !important;
-  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.04) !important;
-  margin-top: 1.5rem !important;
+  background: #ffffff;
+  border: 1px solid #dce4ec;
+  border-radius: var(--radius-sm);
+  padding: 1.5rem;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.04);
+  margin-top: 1.5rem;
 }
 
 .blog-grid {
-  display: grid !important;
-  grid-template-columns: repeat(3, 1fr) !important;
-  gap: 1.5rem !important;
-  align-items: start !important;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  align-items: start;
 }
 
 .blog-card {
-  background: transparent !important;
-  border: none !important;
-  border-radius: 0 !important;
-  overflow: visible !important;
-  display: flex !important;
-  flex-direction: column !important;
-  height: auto !important;
-  box-shadow: none !important;
-  transition: transform 0.25s ease !important;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  overflow: visible;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  box-shadow: none;
+  transition: transform 0.25s ease;
 }
 
 .blog-card:hover {
-  transform: translateY(-4px) !important;
-  box-shadow: none !important;
-  border: none !important;
+  transform: translateY(-4px);
+  box-shadow: none;
+  border: none;
 }
 
 .blog-card-link {
-  display: flex !important;
-  flex-direction: column !important;
-  text-decoration: none !important;
-  color: inherit !important;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: inherit;
 }
 
 .blog-img-wrap {
-  width: 100% !important;
-  aspect-ratio: 16 / 9 !important;
-  height: auto !important;
-  min-height: unset !important;
-  max-height: unset !important;
-  overflow: hidden !important;
-  position: relative !important;
-  background-color: #f1f5f9 !important;
-  border-radius: 4px !important;
-  border: 1px solid #e2e8f0 !important;
-  margin: 0 0 0.85rem 0 !important;
-  padding: 0 !important;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  height: auto;
+  min-height: unset;
+  max-height: unset;
+  overflow: hidden;
+  position: relative;
+  background-color: #f1f5f9;
+  border-radius: 4px;
+  border: 1px solid #e2e8f0;
+  margin: 0 0 0.85rem 0;
+  padding: 0;
 }
 
 .blog-img {
-  width: 100% !important;
-  height: 100% !important;
-  object-fit: cover !important;
-  object-position: center !important;
-  display: block !important;
-  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .blog-card:hover .blog-img {
-  transform: scale(1.04) !important;
+  transform: scale(1.04);
 }
 
 .blog-title {
-  font-family: var(--font-heading) !important;
-  font-size: 1.05rem !important;
-  font-weight: 600 !important;
-  line-height: 1.45 !important;
-  margin: 0 !important;
-  color: #1e3a8a !important;
-  text-align: center !important;
-  transition: color 0.2s ease !important;
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 600;
+  line-height: 1.45;
+  margin: 0;
+  color: #1e3a8a;
+  text-align: center;
+  transition: color 0.2s ease;
 }
 
 .blog-card:hover .blog-title,
 .blog-title:hover {
-  color: var(--color-gold) !important;
+  color: var(--color-gold);
 }
 
 @media (max-width: 900px) {
   .blog-grid {
-    grid-template-columns: repeat(2, 1fr) !important;
-    gap: 1.25rem !important;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
   }
 }
 
 @media (max-width: 600px) {
   .blog-grid {
-    grid-template-columns: 1fr !important;
-    gap: 1.5rem !important;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
   .blog-box-container {
-    padding: 1rem !important;
+    padding: 1rem;
   }
 }
 
@@ -3109,5 +3105,199 @@ html, body {
 
   .cart-header-cta {
     padding: 0.28rem 0.45rem !important;
+  }
+}
+
+
+/* ==========================================================================
+   MOBILE & TABLET RESPONSIVE HEADER STYLES
+   ========================================================================== */
+@media (max-width: 991px) {
+  .site-header {
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 1000 !important;
+    background-color: var(--bg-primary) !important;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.15) !important;
+  }
+
+  .header-main {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    height: 56px !important;
+    padding: 0 12px !important;
+    gap: 8px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .mobile-menu-toggle {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 36px !important;
+    height: 36px !important;
+    min-width: 36px !important;
+    font-size: 1.25rem !important;
+    background: transparent !important;
+    border: none !important;
+    color: var(--text-primary) !important;
+    cursor: pointer !important;
+    padding: 0 !important;
+    flex-shrink: 0 !important;
+    margin: 0 !important;
+  }
+
+  .brand-logo-wrap {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex: 1 1 auto !important;
+    max-width: calc(100% - 130px) !important;
+    text-align: center !important;
+    overflow: hidden !important;
+    margin: 0 auto !important;
+  }
+
+  .brand-logo-wrap .custom-logo-link,
+  .brand-logo-wrap .brand-logo {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin: 0 !important;
+  }
+
+  .brand-logo-wrap img.custom-logo,
+  .brand-logo-wrap img.site-logo-img,
+  .brand-logo img {
+    max-height: 28px !important;
+    max-width: 140px !important;
+    width: auto !important;
+    height: auto !important;
+    object-fit: contain !important;
+    margin: 0 auto !important;
+    display: block !important;
+  }
+
+  /* Fallback text if logo image is not present */
+  .brand-logo .brand-title {
+    font-size: 1.05rem !important;
+    letter-spacing: 0.02em !important;
+    white-space: nowrap !important;
+  }
+  .brand-logo .logo-tag {
+    display: none !important;
+  }
+
+  .header-search-wrap {
+    display: none !important;
+  }
+
+  .header-actions {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+    gap: 6px !important;
+    flex-shrink: 0 !important;
+    margin: 0 !important;
+  }
+
+  .header-actions .action-btn {
+    width: 34px !important;
+    height: 34px !important;
+    min-width: 34px !important;
+    font-size: 0.95rem !important;
+    padding: 0 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background: transparent !important;
+    border-radius: 50% !important;
+  }
+
+  /* Hide wishlist and account on top header since they exist in drawer */
+  .header-actions a[href*="wishlist"],
+  .header-actions a[href*="account"],
+  .header-actions a[title*="Wishlist"],
+  .header-actions a[title*="Account"],
+  .header-actions a[aria-label*="Wishlist"],
+  .header-actions a[aria-label*="Account"] {
+    display: none !important;
+  }
+
+  .cart-header-cta {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 4px !important;
+    background-color: var(--color-charcoal) !important;
+    color: #ffffff !important;
+    padding: 0.32rem 0.6rem !important;
+    border-radius: 50px !important;
+    font-size: 0.75rem !important;
+    font-weight: 700 !important;
+    text-decoration: none !important;
+    flex-shrink: 0 !important;
+  }
+
+  .cart-header-cta span:not(.action-count-badge) {
+    display: none !important;
+  }
+
+  .cart-header-cta .action-count-badge {
+    position: static !important;
+    width: 16px !important;
+    height: 16px !important;
+    font-size: 0.62rem !important;
+    background-color: var(--color-gold) !important;
+    color: #1a1a1a !important;
+    border-radius: 50% !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin-left: 2px !important;
+  }
+
+  .nav-bar {
+    display: none !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-main {
+    height: 52px !important;
+    padding: 0 8px !important;
+    gap: 4px !important;
+  }
+
+  .mobile-menu-toggle {
+    width: 32px !important;
+    height: 32px !important;
+    min-width: 32px !important;
+    font-size: 1.1rem !important;
+  }
+
+  .brand-logo-wrap {
+    max-width: calc(100% - 110px) !important;
+  }
+
+  .brand-logo-wrap img.custom-logo,
+  .brand-logo-wrap img.site-logo-img,
+  .brand-logo img {
+    max-height: 24px !important;
+    max-width: 120px !important;
+  }
+
+  .header-actions .action-btn {
+    width: 30px !important;
+    height: 30px !important;
+    min-width: 30px !important;
+    font-size: 0.85rem !important;
+  }
+
+  .cart-header-cta {
+    padding: 0.28rem 0.48rem !important;
   }
 }
