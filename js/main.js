@@ -509,3 +509,21 @@ function searchStore(query) {
   if (!query) return;
   window.location.href = `shop.html?search=${encodeURIComponent(query)}`;
 }
+
+
+// Global toggle for mobile navigation drawer
+window.toggleMobileNavDrawer = function() {
+  var drawer = document.querySelector('.mobile-nav-drawer');
+  var overlay = document.querySelector('.mobile-nav-overlay');
+  if (!drawer) return;
+  var isActive = drawer.classList.contains('active');
+  if (isActive) {
+    drawer.classList.remove('active');
+    if (overlay) overlay.classList.remove('active');
+    document.body.style.overflow = '';
+  } else {
+    drawer.classList.add('active');
+    if (overlay) overlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+};
