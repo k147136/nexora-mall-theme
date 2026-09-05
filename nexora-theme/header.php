@@ -34,17 +34,9 @@
         </button>
 
         <!-- Luxury Brand Logo -->
-        <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="brand-logo" aria-label="<?php esc_attr_e( 'NEXORA MALL Homepage', 'nexora-mall' ); ?>">
-            <?php
-            if ( has_custom_logo() ) {
-                the_custom_logo();
-            } else {
-                ?>
-                <span class="brand-logo-text">NEXORA<span class="logo-accent">.</span>MALL</span>
-                <span class="logo-tag"><?php echo esc_html( get_bloginfo( 'description' ) ?: 'LUXURY MARKETPLACE' ); ?></span>
-                <?php
-            }
-            ?>
+        <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="brand-logo" aria-label="NEXORA MALL Homepage">
+            <span class="brand-title">NEXORA<span class="logo-accent">.</span>MALL</span>
+            <span class="logo-tag"><?php esc_html_e( 'LUXURY MARKETPLACE', 'nexora-mall' ); ?></span>
         </a>
 
         <!-- Search Bar -->
@@ -126,21 +118,24 @@
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a href="<?php echo esc_url( home_url( '/shop?sale=true' ) ); ?>" class="nav-link" style="color: var(--color-gold);">
-                            <i class="fas fa-bolt"></i> <?php esc_html_e( 'Flash Deals', 'nexora-mall' ); ?>
-                        </a>
+                        <a href="<?php echo esc_url( home_url( '/shop?cat=fashion' ) ); ?>" class="nav-link"><?php esc_html_e( 'Fashion', 'nexora-mall' ); ?></a>
                     </li>
                     <li class="nav-item">
-                        <a href="<?php echo esc_url( home_url( '/blog' ) ); ?>" class="nav-link"><?php esc_html_e( 'Editorial Blog', 'nexora-mall' ); ?></a>
+                        <a href="<?php echo esc_url( home_url( '/shop?cat=electronics' ) ); ?>" class="nav-link"><?php esc_html_e( 'Electronics', 'nexora-mall' ); ?></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="<?php echo esc_url( home_url( '/shop?cat=home' ) ); ?>" class="nav-link"><?php esc_html_e( 'Home & Living', 'nexora-mall' ); ?></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="<?php echo esc_url( home_url( '/shop?sale=true' ) ); ?>" class="nav-link" style="color: var(--color-gold); font-weight: 700;">
+                            <i class="fas fa-bolt"></i> <?php esc_html_e( 'Flash Sale', 'nexora-mall' ); ?>
+                        </a>
                     </li>
                     <li class="nav-item">
                         <a href="<?php echo esc_url( home_url( '/about' ) ); ?>" class="nav-link"><?php esc_html_e( 'About Us', 'nexora-mall' ); ?></a>
                     </li>
                     <li class="nav-item">
-                        <a href="<?php echo esc_url( home_url( '/contact' ) ); ?>" class="nav-link"><?php esc_html_e( 'VIP Concierge', 'nexora-mall' ); ?></a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="<?php echo esc_url( home_url( '/account-tracking' ) ); ?>#track" class="nav-link"><?php esc_html_e( 'Track Orders', 'nexora-mall' ); ?></a>
+                        <a href="<?php echo esc_url( home_url( '/contact' ) ); ?>" class="nav-link"><?php esc_html_e( 'Contact', 'nexora-mall' ); ?></a>
                     </li>
                     <li class="nav-item">
                         <a href="<?php echo esc_url( home_url( '/faq-policy' ) ); ?>" class="nav-link"><?php esc_html_e( 'FAQ & Policy', 'nexora-mall' ); ?></a>
