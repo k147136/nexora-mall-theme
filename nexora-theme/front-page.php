@@ -10,16 +10,26 @@
 
 get_header();
 
-// Check if current front page has content or is built with Elementor
-$has_custom_content = false;
+// Detect if Elementor is in editor mode, preview mode, or page was built with Elementor
+$is_elementor = false;
+if ( isset( $_GET['elementor-preview'] ) || ( isset( $_GET['action'] ) && $_GET['action'] === 'elementor' ) ) {
+    $is_elementor = true;
+}
+if ( class_exists( '\Elementor\Plugin' ) ) {
+    if ( \Elementor\Plugin::$instance->preview->is_preview_mode() || \Elementor\Plugin::$instance->editor->is_edit_mode() || \Elementor\Plugin::$instance->db->is_built_with_elementor( get_the_ID() ) ) {
+        $is_elementor = true;
+    }
+}
+
+$has_page_content = false;
 if ( have_posts() ) {
     while ( have_posts() ) {
         the_post();
-        $page_content = get_the_content();
-        if ( ! empty( trim( $page_content ) ) ) {
-            $has_custom_content = true;
+        $raw_c = get_the_content();
+        if ( $is_elementor || ! empty( trim( $raw_c ) ) ) {
+            $has_page_content = true;
             ?>
-            <main id="primary" class="site-main nexora-elementor-canvas">
+            <main id="primary" class="site-main nexora-elementor-content">
                 <?php the_content(); ?>
             </main>
             <?php
@@ -27,7 +37,7 @@ if ( have_posts() ) {
     }
 }
 
-if ( ! $has_custom_content ) :
+if ( ! $has_page_content ) :
 ?>
 <main id="primary" class="site-main">
 
@@ -127,7 +137,6 @@ if ( ! $has_custom_content ) :
             </div>
 
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 1.25rem;">
-                <!-- Cat 1 -->
                 <a href="<?php echo esc_url( home_url( '/shop?cat=fashion' ) ); ?>" class="category-pill-card reveal-on-scroll delay-1" style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-sm); padding: 1.5rem 1rem; text-decoration: none; display: flex; flex-direction: column; align-items: center; transition: var(--transition);">
                     <div style="width: 76px; height: 76px; border-radius: 50%; overflow: hidden; margin-bottom: 0.85rem; border: 2px solid var(--color-gold); box-shadow: var(--shadow-sm);">
                         <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=300&q=80" alt="Fashion & Apparel" style="width: 100%; height: 100%; object-fit: cover;">
@@ -136,7 +145,6 @@ if ( ! $has_custom_content ) :
                     <span style="font-size: 0.75rem; color: var(--text-muted); margin-top: 4px;">120+ <?php esc_html_e( 'Items', 'nexora-mall' ); ?></span>
                 </a>
 
-                <!-- Cat 2 -->
                 <a href="<?php echo esc_url( home_url( '/shop?cat=electronics' ) ); ?>" class="category-pill-card reveal-on-scroll delay-2" style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-sm); padding: 1.5rem 1rem; text-decoration: none; display: flex; flex-direction: column; align-items: center; transition: var(--transition);">
                     <div style="width: 76px; height: 76px; border-radius: 50%; overflow: hidden; margin-bottom: 0.85rem; border: 2px solid var(--color-gold); box-shadow: var(--shadow-sm);">
                         <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=300&q=80" alt="Electronics" style="width: 100%; height: 100%; object-fit: cover;">
@@ -145,7 +153,6 @@ if ( ! $has_custom_content ) :
                     <span style="font-size: 0.75rem; color: var(--text-muted); margin-top: 4px;">85+ <?php esc_html_e( 'Items', 'nexora-mall' ); ?></span>
                 </a>
 
-                <!-- Cat 3 -->
                 <a href="<?php echo esc_url( home_url( '/shop?cat=home' ) ); ?>" class="category-pill-card reveal-on-scroll delay-3" style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-sm); padding: 1.5rem 1rem; text-decoration: none; display: flex; flex-direction: column; align-items: center; transition: var(--transition);">
                     <div style="width: 76px; height: 76px; border-radius: 50%; overflow: hidden; margin-bottom: 0.85rem; border: 2px solid var(--color-gold); box-shadow: var(--shadow-sm);">
                         <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=300&q=80" alt="Home & Living" style="width: 100%; height: 100%; object-fit: cover;">
@@ -154,7 +161,6 @@ if ( ! $has_custom_content ) :
                     <span style="font-size: 0.75rem; color: var(--text-muted); margin-top: 4px;">94+ <?php esc_html_e( 'Items', 'nexora-mall' ); ?></span>
                 </a>
 
-                <!-- Cat 4 -->
                 <a href="<?php echo esc_url( home_url( '/shop?cat=beauty' ) ); ?>" class="category-pill-card reveal-on-scroll delay-4" style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-sm); padding: 1.5rem 1rem; text-decoration: none; display: flex; flex-direction: column; align-items: center; transition: var(--transition);">
                     <div style="width: 76px; height: 76px; border-radius: 50%; overflow: hidden; margin-bottom: 0.85rem; border: 2px solid var(--color-gold); box-shadow: var(--shadow-sm);">
                         <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=300&q=80" alt="Beauty & Care" style="width: 100%; height: 100%; object-fit: cover;">
@@ -163,7 +169,6 @@ if ( ! $has_custom_content ) :
                     <span style="font-size: 0.75rem; color: var(--text-muted); margin-top: 4px;">64+ <?php esc_html_e( 'Items', 'nexora-mall' ); ?></span>
                 </a>
 
-                <!-- Cat 5 -->
                 <a href="<?php echo esc_url( home_url( '/shop?cat=accessories' ) ); ?>" class="category-pill-card reveal-on-scroll delay-5" style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-sm); padding: 1.5rem 1rem; text-decoration: none; display: flex; flex-direction: column; align-items: center; transition: var(--transition);">
                     <div style="width: 76px; height: 76px; border-radius: 50%; overflow: hidden; margin-bottom: 0.85rem; border: 2px solid var(--color-gold); box-shadow: var(--shadow-sm);">
                         <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=300&q=80" alt="Accessories" style="width: 100%; height: 100%; object-fit: cover;">
@@ -172,7 +177,6 @@ if ( ! $has_custom_content ) :
                     <span style="font-size: 0.75rem; color: var(--text-muted); margin-top: 4px;">110+ <?php esc_html_e( 'Items', 'nexora-mall' ); ?></span>
                 </a>
 
-                <!-- Cat 6 -->
                 <a href="<?php echo esc_url( home_url( '/shop?cat=grocery' ) ); ?>" class="category-pill-card reveal-on-scroll delay-6" style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-sm); padding: 1.5rem 1rem; text-decoration: none; display: flex; flex-direction: column; align-items: center; transition: var(--transition);">
                     <div style="width: 76px; height: 76px; border-radius: 50%; overflow: hidden; margin-bottom: 0.85rem; border: 2px solid var(--color-gold); box-shadow: var(--shadow-sm);">
                         <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=300&q=80" alt="Gourmet Grocery" style="width: 100%; height: 100%; object-fit: cover;">
@@ -198,7 +202,6 @@ if ( ! $has_custom_content ) :
                 </a>
             </div>
 
-            <!-- 4 Column Products Grid -->
             <div class="products-grid" style="grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 1.75rem;">
                 <!-- Product 1 -->
                 <article class="product-card reveal-on-scroll">
@@ -319,7 +322,7 @@ if ( ! $has_custom_content ) :
         </div>
     </section>
 
-    <!-- 5. VIP FLASH SALE / PRIVATE VAULT SECTION -->
+    <!-- 5. VIP FLASH SALE SECTION -->
     <section class="section-padding" style="background: #141414; color: #fff;">
         <div class="container">
             <div style="display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 3rem; align-items: center;" class="flash-vault-layout">
@@ -335,15 +338,15 @@ if ( ! $has_custom_content ) :
                     <!-- Countdown Boxes -->
                     <div style="display: flex; gap: 1rem; margin-bottom: 2.25rem;">
                         <div style="background: #222; border: 1px solid rgba(212,168,67,0.3); border-radius: var(--radius-xs); padding: 0.85rem 1.25rem; text-align: center; min-width: 75px;">
-                            <div style="font-size: 1.75rem; font-weight: 900; color: var(--color-gold); font-family: var(--font-heading);" id="f-days">48</div>
+                            <div style="font-size: 1.75rem; font-weight: 900; color: var(--color-gold); font-family: var(--font-heading);">48</div>
                             <div style="font-size: 0.65rem; text-transform: uppercase; color: #888; font-weight: 700; letter-spacing: 0.1em;"><?php esc_html_e( 'HOURS', 'nexora-mall' ); ?></div>
                         </div>
                         <div style="background: #222; border: 1px solid rgba(212,168,67,0.3); border-radius: var(--radius-xs); padding: 0.85rem 1.25rem; text-align: center; min-width: 75px;">
-                            <div style="font-size: 1.75rem; font-weight: 900; color: var(--color-gold); font-family: var(--font-heading);" id="f-mins">15</div>
+                            <div style="font-size: 1.75rem; font-weight: 900; color: var(--color-gold); font-family: var(--font-heading);">15</div>
                             <div style="font-size: 0.65rem; text-transform: uppercase; color: #888; font-weight: 700; letter-spacing: 0.1em;"><?php esc_html_e( 'MIN', 'nexora-mall' ); ?></div>
                         </div>
                         <div style="background: #222; border: 1px solid rgba(212,168,67,0.3); border-radius: var(--radius-xs); padding: 0.85rem 1.25rem; text-align: center; min-width: 75px;">
-                            <div style="font-size: 1.75rem; font-weight: 900; color: var(--color-gold); font-family: var(--font-heading);" id="f-secs">26</div>
+                            <div style="font-size: 1.75rem; font-weight: 900; color: var(--color-gold); font-family: var(--font-heading);">26</div>
                             <div style="font-size: 0.65rem; text-transform: uppercase; color: #888; font-weight: 700; letter-spacing: 0.1em;"><?php esc_html_e( 'SECS', 'nexora-mall' ); ?></div>
                         </div>
                     </div>
@@ -367,7 +370,7 @@ if ( ! $has_custom_content ) :
         </div>
     </section>
 
-    <!-- 6. BRAND PARTNERS / LUXURY HOUSES STRIP -->
+    <!-- 6. BRAND PARTNERS STRIP -->
     <section style="padding: 2.5rem 0; background: var(--bg-card); border-bottom: 1px solid var(--border-color);">
         <div class="container">
             <div style="display: flex; justify-content: space-around; align-items: center; flex-wrap: wrap; gap: 2rem; opacity: 0.85;">
@@ -381,7 +384,7 @@ if ( ! $has_custom_content ) :
         </div>
     </section>
 
-    <!-- 7. CLIENT TESTIMONIALS / WHAT OUR GLOBAL PATRONS SAY -->
+    <!-- 7. CLIENT TESTIMONIALS -->
     <section class="section-padding" style="background-color: var(--bg-primary);">
         <div class="container">
             <div class="section-header reveal-on-scroll" style="text-align: center; margin-bottom: 3rem;">
