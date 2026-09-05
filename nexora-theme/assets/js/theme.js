@@ -192,7 +192,7 @@ class StoreState {
   constructor() {
     this.cart = JSON.parse(localStorage.getItem('nexora_cart') || '[]');
     this.wishlist = JSON.parse(localStorage.getItem('nexora_wishlist') || '[]');
-    this.theme = localStorage.getItem('nexora_theme') || 'light';
+    
     this.discountPercent = parseFloat(localStorage.getItem('nexora_discount') || '0');
   }
 
@@ -206,9 +206,7 @@ class StoreState {
     this.updateBadges();
   }
 
-  saveTheme() {
-    localStorage.setItem('nexora_theme', this.theme);
-  }
+  
 
   updateBadges() {
     const cartCount = this.cart.reduce((sum, i) => sum + i.qty, 0);
@@ -229,7 +227,7 @@ const state = new StoreState();
 
 // 3. Document Ready Setup
 document.addEventListener('DOMContentLoaded', () => {
-  initTheme();
+  
   state.updateBadges();
   initHeroSlider();
   initFlashCountdown();
@@ -239,39 +237,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initQuickViewModal();
   initMobileNav();
 });
-
-// 4. Theme Toggle (Dark / Light Mode)
-function initTheme() {
-  if (state.theme === 'dark') {
-    document.body.classList.add('dark-theme');
-    updateThemeIcon(true);
-  } else {
-    document.body.classList.remove('dark-theme');
-    updateThemeIcon(false);
-  }
-
-  document.querySelectorAll('.theme-toggle-btn').forEach(btn => {
-    btn.addEventListener('click', toggleTheme);
-  });
-}
-
-function toggleTheme() {
-  const isDark = document.body.classList.toggle('dark-theme');
-  state.theme = isDark ? 'dark' : 'light';
-  state.saveTheme();
-  updateThemeIcon(isDark);
-  showToast(`Switched to ${state.theme.toUpperCase()} luxury theme`);
-}
-
-function updateThemeIcon(isDark) {
-  document.querySelectorAll('.theme-toggle-btn i').forEach(icon => {
-    if (isDark) {
-      icon.className = 'fas fa-sun';
-    } else {
-      icon.className = 'fas fa-moon';
-    }
-  });
-}
 
 // 5. Hero Slider Carousel
 function initHeroSlider() {
