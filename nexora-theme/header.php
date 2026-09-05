@@ -62,11 +62,6 @@
 
         <!-- Utilities (Theme Switcher, Wishlist, Account, Cart) -->
         <div class="header-actions">
-            <!-- Theme Toggle Button -->
-            <button class="action-btn theme-toggle-btn" onclick="toggleThemeMode()" aria-label="<?php esc_attr_e( 'Toggle Dark/Light Mode', 'nexora-mall' ); ?>" title="<?php esc_attr_e( 'Toggle Mode', 'nexora-mall' ); ?>">
-                <i class="fas fa-moon"></i>
-            </button>
-
             <!-- Wishlist -->
             <a href="<?php echo esc_url( home_url( '/account-tracking' ) ); ?>#wishlist" class="action-btn" aria-label="<?php esc_attr_e( 'Wishlist', 'nexora-mall' ); ?>" title="<?php esc_attr_e( 'Your Wishlist', 'nexora-mall' ); ?>">
                 <i class="far fa-heart"></i>
