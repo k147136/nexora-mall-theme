@@ -8,32 +8,41 @@
 get_header();
 ?>
 
-<main id="primary" class="site-main section-padding">
-    <div class="container">
-        <?php
-        while ( have_posts() ) :
-            the_post();
-            ?>
-            <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-                <header class="entry-header" style="margin-bottom: 2rem;">
-                    <h1 class="entry-title section-title"><?php the_title(); ?></h1>
-                </header>
+<main id="primary" class="site-main">
+    <!-- Luxury Page Hero Banner -->
+    <section style="background-color: var(--color-charcoal-dark); color: #fff; padding: 3.25rem 0; border-bottom: 1px solid rgba(212,168,67,0.3);">
+        <div class="container">
+            <div style="font-size: 0.8125rem; color: #aaa; margin-bottom: 0.5rem;">
+                <a href="<?php echo esc_url( home_url( '/' ) ); ?>" style="color: var(--color-gold); text-decoration: none;"><?php esc_html_e( 'Home', 'nexora-mall' ); ?></a> / 
+                <span style="color: #fff;"><?php the_title(); ?></span>
+            </div>
+            <h1 style="font-size: 2.75rem; color: #ffffff; font-family: var(--font-heading); margin-bottom: 0.5rem; line-height: 1.2;"><?php the_title(); ?></h1>
+        </div>
+    </section>
 
-                <div class="entry-content" style="line-height: 1.8; color: var(--text-secondary);">
-                    <?php
-                    the_content();
-
-                    wp_link_pages( array(
-                        'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'nexora-mall' ),
-                        'after'  => '</div>',
-                    ) );
-                    ?>
-                </div>
-            </article>
+    <section class="section-padding">
+        <div class="container">
             <?php
-        endwhile;
-        ?>
-    </div>
+            while ( have_posts() ) :
+                the_post();
+                ?>
+                <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+                    <div class="entry-content" style="line-height: 1.8; color: var(--text-secondary);">
+                        <?php
+                        the_content();
+
+                        wp_link_pages( array(
+                            'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'nexora-mall' ),
+                            'after'  => '</div>',
+                        ) );
+                        ?>
+                    </div>
+                </article>
+                <?php
+            endwhile;
+            ?>
+        </div>
+    </section>
 </main>
 
 <?php
