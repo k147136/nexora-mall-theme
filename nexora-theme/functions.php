@@ -116,11 +116,9 @@ require_once NEXORA_DIR . '/inc/tgm-plugin-activation.php';
 require_once NEXORA_DIR . '/inc/woocommerce-setup.php';
 require_once NEXORA_DIR . '/inc/demo-import.php';
 
-add_action( 'plugins_loaded', function() {
-    if ( did_action( 'elementor/loaded' ) && file_exists( NEXORA_DIR . '/inc/elementor/elementor.php' ) ) {
-        require_once NEXORA_DIR . '/inc/elementor/elementor.php';
-    }
-} );
+if ( file_exists( NEXORA_DIR . '/inc/elementor/elementor.php' ) ) {
+    require_once NEXORA_DIR . '/inc/elementor/elementor.php';
+}
 
 /**
  * 5. Automatic Template Fallback Router & Virtual Pages
