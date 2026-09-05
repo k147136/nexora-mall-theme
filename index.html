@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="NEXORA MALL — Shop Everything. Live Better. The ultimate luxury online marketplace.">
+  <meta name="author" content="NEXORA MALL Inc.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="NEXORA MALL — Shop Everything. Live Better | Luxury Online Marketplace">
+  <meta property="og:description" content="Discover premium luxury fashion, audio tech, home decor, beauty and gourmet essentials.">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts: Playfair Display & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;0,900;1,400;1,600;1,700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6 CDN for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Master Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+  <title>NEXORA MALL — Shop Everything. Live Better | Luxury Online Marketplace</title>
+</head>
+<body>
+
+  <!-- 1. ANNOUNCEMENT TOP BAR -->
+  <aside class="announcement-bar" aria-label="Store Announcement">
+    <div class="container announcement-inner">
+      <div>
+        <span class="badge badge-gold" style="margin-right: 0.5rem;">Luxury Premiere</span>
+        <span>Complimentary Express Shipping on all orders over <strong>$150</strong></span>
+      </div>
+      <div class="announcement-links">
+        <a href="account-tracking.html#track"><i class="fas fa-truck-fast"></i> Track Order</a>
+        <a href="contact.html"><i class="fas fa-headset"></i> 24/7 VIP Concierge</a>
+        <a href="faq-policy.html"><i class="fas fa-shield-halved"></i> Buyer Guarantee</a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- 2. MAIN FIXED HEADER -->
+  <header class="site-header" id="main-header">
+    <div class="container header-main">
+      <!-- Mobile Hamburger Toggle -->
+      <button class="action-btn mobile-menu-toggle" aria-label="Open Navigation Menu">
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <!-- Brand Logo -->
+      <a href="index.html" class="brand-logo" aria-label="NEXORA MALL Homepage">
+        NEXORA<span class="logo-accent">.</span>MALL
+        <span class="logo-tag">LUXURY MARKETPLACE</span>
+      </a>
+
+      <!-- Search Bar -->
+      <div class="header-search-wrap">
+        <form class="header-search-box" onsubmit="event.preventDefault(); searchStore(this.querySelector('input').value);">
+          <input type="text" class="header-search-input" placeholder="Search fashion, electronics, luxury home & beauty...">
+          <button type="submit" class="header-search-btn" aria-label="Search Store">
+            <i class="fas fa-magnifying-glass"></i>
+          </button>
+        </form>
+      </div>
+
+      <!-- Utilities (Theme Toggle, Wishlist, Account, Cart) -->
+      <div class="header-actions">
+        <!-- Theme Switcher -->
+        <button class="action-btn theme-toggle-btn" aria-label="Toggle Dark/Light Mode" title="Toggle Mode">
+          <i class="fas fa-moon"></i>
+        </button>
+
+        <!-- Wishlist -->
+        <a href="account-tracking.html#wishlist" class="action-btn" aria-label="Wishlist" title="Your Wishlist">
+          <i class="far fa-heart"></i>
+          <span class="action-count-badge wishlist-badge-count">0</span>
+        </a>
+
+        <!-- Account -->
+        <a href="account-tracking.html" class="action-btn" aria-label="My Account" title="My Account">
+          <i class="far fa-user"></i>
+        </a>
+
+        <!-- Cart Header Button -->
+        <a href="cart.html" class="cart-header-cta" aria-label="Shopping Cart">
+          <i class="fas fa-bag-shopping" style="color: var(--color-gold);"></i>
+          <span>Bag</span>
+          <span class="action-count-badge cart-badge-count" style="position: static; margin-left: 2px;">0</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- 3. MEGA NAVIGATION BAR -->
+    <nav class="nav-bar" aria-label="Main Store Navigation">
+      <div class="container">
+        <ul class="nav-links-list">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link active">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="shop.html" class="nav-link ">
+              Shop All <i class="fas fa-chevron-down" style="font-size: 0.65rem;"></i>
+            </a>
+            <div class="dropdown-menu">
+              <a href="shop.html?cat=fashion" class="dropdown-item">Fashion & Apparel</a>
+              <a href="shop.html?cat=electronics" class="dropdown-item">Electronics & Audio</a>
+              <a href="shop.html?cat=home" class="dropdown-item">Home & Living</a>
+              <a href="shop.html?cat=beauty" class="dropdown-item">Beauty & Personal Care</a>
+              <a href="shop.html?cat=accessories" class="dropdown-item">Watches & Accessories</a>
+              <a href="shop.html?cat=grocery" class="dropdown-item">Gourmet Grocery & Essentials</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a href="shop.html?cat=fashion" class="nav-link">Fashion</a>
+          </li>
+          <li class="nav-item">
+            <a href="shop.html?cat=electronics" class="nav-link">Electronics</a>
+          </li>
+          <li class="nav-item">
+            <a href="shop.html?cat=home" class="nav-link">Home & Living</a>
+          </li>
+          <li class="nav-item">
+            <a href="shop.html?sale=true" class="nav-link" style="color: var(--color-gold);">
+              <i class="fas fa-bolt"></i> Flash Sale
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="about.html" class="nav-link ">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link ">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a href="faq-policy.html" class="nav-link ">FAQ & Policy</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- MOBILE OFF-CANVAS DRAWER -->
+  <div class="mobile-nav-overlay"></div>
+  <div class="mobile-nav-drawer">
+    <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-color); padding-bottom: 1rem;">
+      <a href="index.html" class="brand-logo" style="font-size: 1.4rem;">NEXORA<span class="logo-accent">.</span>MALL</a>
+      <button class="mobile-drawer-close action-btn" aria-label="Close Menu"><i class="fas fa-xmark"></i></button>
+    </div>
+    <div style="margin: 1.25rem 0;">
+      <form onsubmit="event.preventDefault(); searchStore(this.querySelector('input').value);">
+        <input type="text" placeholder="Search catalog..." style="width: 100%; padding: 0.65rem 1rem; border: 1px solid var(--border-color); border-radius: var(--radius-xs); background: var(--bg-secondary); color: var(--text-primary);">
+      </form>
+    </div>
+    <ul style="display: flex; flex-direction: column; gap: 0.85rem; font-weight: 600; font-size: 0.95rem;">
+      <li><a href="index.html" class="dropdown-item"><i class="fas fa-house" style="margin-right:8px; color:var(--color-gold);"></i> Home</a></li>
+      <li><a href="shop.html" class="dropdown-item"><i class="fas fa-store" style="margin-right:8px; color:var(--color-gold);"></i> Shop All Catalog</a></li>
+      <li><a href="shop.html?cat=fashion" class="dropdown-item"><i class="fas fa-shirt" style="margin-right:8px; color:var(--color-gold);"></i> Fashion & Apparel</a></li>
+      <li><a href="shop.html?cat=electronics" class="dropdown-item"><i class="fas fa-laptop" style="margin-right:8px; color:var(--color-gold);"></i> Electronics & Audio</a></li>
+      <li><a href="shop.html?cat=home" class="dropdown-item"><i class="fas fa-couch" style="margin-right:8px; color:var(--color-gold);"></i> Home & Living</a></li>
+      <li><a href="shop.html?cat=beauty" class="dropdown-item"><i class="fas fa-wand-magic-sparkles" style="margin-right:8px; color:var(--color-gold);"></i> Beauty & Personal Care</a></li>
+      <li><a href="shop.html?cat=grocery" class="dropdown-item"><i class="fas fa-basket-shopping" style="margin-right:8px; color:var(--color-gold);"></i> Gourmet Grocery</a></li>
+      <li><a href="shop.html?sale=true" class="dropdown-item" style="color:var(--color-gold);"><i class="fas fa-bolt" style="margin-right:8px;"></i> Flash Sale</a></li>
+      <li><a href="about.html" class="dropdown-item"><i class="fas fa-gem" style="margin-right:8px; color:var(--color-gold);"></i> About Nexora</a></li>
+      <li><a href="account-tracking.html" class="dropdown-item"><i class="fas fa-user" style="margin-right:8px; color:var(--color-gold);"></i> My Account / Orders</a></li>
+      <li><a href="contact.html" class="dropdown-item"><i class="fas fa-headset" style="margin-right:8px; color:var(--color-gold);"></i> 24/7 VIP Concierge</a></li>
+    </ul>
+    <div style="margin-top: auto; padding-top: 1.25rem; border-top: 1px solid var(--border-color); font-size: 0.8rem; color: var(--text-muted);">
+      <div>Helpline: +1 (800) 555-NEXORA</div>
+      <div style="margin-top: 4px;">Shop Everything. Live Better.</div>
+    </div>
+  </div>
+
+
+
+  <main>
+    <!-- 1. HERO SLIDER CAROUSEL -->
+    <section class="hero-slider-section" aria-label="Featured Collections Carousel">
+      <div class="hero-slider-wrap">
+        <!-- Slide 1 -->
+        <div class="hero-slide active" style="background-image: url('https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=1800&q=80');">
+          <div class="hero-slide-overlay"></div>
+          <div class="container" style="height: 100%; display: flex; align-items: center;">
+            <div class="hero-slide-content reveal-on-scroll">
+              <span class="hero-tag"><i class="fas fa-crown"></i> The Autumn Luxury Edit</span>
+              <h1 class="hero-title">Timeless Luxury, <span>Unrivaled</span> Craftsmanship.</h1>
+              <p class="hero-desc">
+                Immerse yourself in our curated selection of fine gold horology, bespoke Italian tailoring, and high-jewelry accessories.
+              </p>
+              <div class="hero-cta-row">
+                <a href="shop.html?cat=accessories" class="btn btn-gold">
+                  Explore Collection <i class="fas fa-arrow-right"></i>
+                </a>
+                <a href="shop.html?sale=true" class="btn btn-outline" style="color: #fff; border-color: rgba(255,255,255,0.4);">
+                  View Flash Sale
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1550009158-9ebf69173e03?auto=format&fit=crop&w=1800&q=80');">
+          <div class="hero-slide-overlay"></div>
+          <div class="container" style="height: 100%; display: flex; align-items: center;">
+            <div class="hero-slide-content">
+              <span class="hero-tag"><i class="fas fa-microchip"></i> Next-Gen Tech</span>
+              <h2 class="hero-title">Acoustic <span>Perfection</span> & Future Living.</h2>
+              <p class="hero-desc">
+                Studio-grade wireless acoustics, flagship smart devices, and intelligent luxury living engineered for the discerning professional.
+              </p>
+              <div class="hero-cta-row">
+                <a href="shop.html?cat=electronics" class="btn btn-gold">
+                  Shop Electronics <i class="fas fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1800&q=80');">
+          <div class="hero-slide-overlay"></div>
+          <div class="container" style="height: 100%; display: flex; align-items: center;">
+            <div class="hero-slide-content">
+              <span class="hero-tag"><i class="fas fa-couch"></i> Interior Architecture</span>
+              <h2 class="hero-title">Curated Spaces, <span>Refined</span> Living.</h2>
+              <p class="hero-desc">
+                Transform your sanctuaries with handcrafted Italian leather lounges, Carrara marble tables, and sculptural illumination.
+              </p>
+              <div class="hero-cta-row">
+                <a href="shop.html?cat=home" class="btn btn-gold">
+                  Discover Home & Living <i class="fas fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Controls -->
+        <button class="slider-arrow slider-prev" aria-label="Previous Slide"><i class="fas fa-chevron-left"></i></button>
+        <button class="slider-arrow slider-next" aria-label="Next Slide"><i class="fas fa-chevron-right"></i></button>
+        <div class="slider-dots-container"></div>
+      </div>
+    </section>
+
+    <!-- 2. VALUE PROPOSITION STRIP -->
+    <section class="value-props-section">
+      <div class="container">
+        <div class="value-props-grid">
+          <div class="value-card reveal-on-scroll delay-1">
+            <div class="value-icon-box"><i class="fas fa-truck-fast"></i></div>
+            <div>
+              <div class="value-title">Complimentary Global Shipping</div>
+              <div class="value-subtitle">Free express dispatch on orders over $150</div>
+            </div>
+          </div>
+
+          <div class="value-card reveal-on-scroll delay-2">
+            <div class="value-icon-box"><i class="fas fa-certificate"></i></div>
+            <div>
+              <div class="value-title">100% Authenticity Guaranteed</div>
+              <div class="value-subtitle">Directly sourced & certified by master houses</div>
+            </div>
+          </div>
+
+          <div class="value-card reveal-on-scroll delay-3">
+            <div class="value-icon-box"><i class="fas fa-shield-halved"></i></div>
+            <div>
+              <div class="value-title">Secure Encrypted Checkout</div>
+              <div class="value-subtitle">256-Bit SSL Protection for all transactions</div>
+            </div>
+          </div>
+
+          <div class="value-card reveal-on-scroll delay-4">
+            <div class="value-icon-box"><i class="fas fa-arrow-rotate-left"></i></div>
+            <div>
+              <div class="value-title">30-Day Hassle-Free Returns</div>
+              <div class="value-subtitle">Complimentary courier pick-up service</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. SHOP BY CATEGORY SECTION -->
+    <section class="categories-section">
+      <div class="container">
+        <div style="text-align: center; margin-bottom: 2.5rem;">
+          <span class="section-tag">Curated Departments</span>
+          <h2 class="section-title">Explore NEXORA Departments</h2>
+          <p class="section-subtitle" style="margin: 0 auto;">
+            From high fashion and state-of-the-art electronics to gourmet pantry staples, discover pure luxury across every category.
+          </p>
+        </div>
+
+        <div class="categories-grid">
+          <a href="shop.html?cat=fashion" class="category-card reveal-on-scroll delay-1">
+            <div class="category-img-box">
+              <img src="https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?auto=format&fit=crop&w=300&q=80" alt="Fashion & Apparel" class="category-img">
+            </div>
+            <h3 class="category-name">Fashion & Apparel</h3>
+            <span class="category-count">140+ Items</span>
+          </a>
+
+          <a href="shop.html?cat=electronics" class="category-card reveal-on-scroll delay-2">
+            <div class="category-img-box">
+              <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=300&q=80" alt="Electronics & Audio" class="category-img">
+            </div>
+            <h3 class="category-name">Electronics</h3>
+            <span class="category-count">95+ Items</span>
+          </a>
+
+          <a href="shop.html?cat=home" class="category-card reveal-on-scroll delay-3">
+            <div class="category-img-box">
+              <img src="https://images.unsplash.com/photo-1533090161767-e6ffed986b88?auto=format&fit=crop&w=300&q=80" alt="Home & Living" class="category-img">
+            </div>
+            <h3 class="category-name">Home & Living</h3>
+            <span class="category-count">110+ Items</span>
+          </a>
+
+          <a href="shop.html?cat=beauty" class="category-card reveal-on-scroll delay-4">
+            <div class="category-img-box">
+              <img src="https://images.unsplash.com/photo-1608248597359-0a67cf5e4c6c?auto=format&fit=crop&w=300&q=80" alt="Beauty & Care" class="category-img">
+            </div>
+            <h3 class="category-name">Beauty & Care</h3>
+            <span class="category-count">85+ Items</span>
+          </a>
+
+          <a href="shop.html?cat=accessories" class="category-card reveal-on-scroll delay-1">
+            <div class="category-img-box">
+              <img src="https://images.unsplash.com/photo-1524805444758-089113d48a6d?auto=format&fit=crop&w=300&q=80" alt="Luxury Accessories" class="category-img">
+            </div>
+            <h3 class="category-name">Accessories</h3>
+            <span class="category-count">70+ Items</span>
+          </a>
+
+          <a href="shop.html?cat=grocery" class="category-card reveal-on-scroll delay-2">
+            <div class="category-img-box">
+              <img src="https://images.unsplash.com/photo-1587049352846-4a222e784d38?auto=format&fit=crop&w=300&q=80" alt="Gourmet Grocery" class="category-img">
+            </div>
+            <h3 class="category-name">Gourmet Grocery</h3>
+            <span class="category-count">60+ Items</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. FEATURED BEST SELLERS SHOWCASE -->
+    <section class="section-padding" style="background-color: var(--bg-secondary);">
+      <div class="container">
+        <div style="display:flex; justify-content:space-between; align-items:flex-end; margin-bottom: 2.5rem; flex-wrap:wrap; gap:1rem;">
+          <div>
+            <span class="section-tag">Curator's Choice</span>
+            <h2 class="section-title">Best Selling Masterpieces</h2>
+            <p class="section-subtitle" style="margin-bottom:0;">The most coveted items celebrated by our clientele worldwide.</p>
+          </div>
+          <a href="shop.html" class="btn btn-outline">
+            View All Catalog <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+
+        <div class="products-grid">
+          <!-- Card 1 -->
+          <article class="product-card reveal-on-scroll delay-1">
+            <div class="product-badge-group">
+              <span class="badge badge-sale">Save 17%</span>
+              <span class="badge badge-gold">18k Gold</span>
+            </div>
+            <div class="product-img-wrap">
+              <img src="https://images.unsplash.com/photo-1524805444758-089113d48a6d?auto=format&fit=crop&w=600&q=80" alt="Aura Royal Chronograph Gold Watch" class="product-img">
+              <div class="product-action-buttons">
+                <button class="quick-action-btn" title="Quick View" onclick="openQuickView('nx-101')"><i class="far fa-eye"></i></button>
+                <button class="quick-action-btn" title="Wishlist" onclick="toggleWishlist('nx-101')"><i class="far fa-heart"></i></button>
+                <button class="quick-action-btn" title="Add to Bag" onclick="addToCart('nx-101')"><i class="fas fa-bag-shopping"></i></button>
+              </div>
+            </div>
+            <div class="product-body">
+              <span class="product-cat">Luxury Watches</span>
+              <h3 class="product-name"><a href="product-details.html?id=nx-101">Aura Royal Chronograph Gold Watch</a></h3>
+              <div class="product-rating">
+                <span>★★★★★</span> <span class="rating-count">(128 reviews)</span>
+              </div>
+              <div class="product-footer">
+                <div class="price-box">
+                  <span class="price-current">$349.00</span>
+                  <span class="price-original">$420.00</span>
+                </div>
+                <button class="btn btn-sm btn-primary" onclick="addToCart('nx-101')">Add to Bag</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="product-card reveal-on-scroll delay-2">
+            <div class="product-badge-group">
+              <span class="badge badge-charcoal">New Release</span>
+            </div>
+            <div class="product-img-wrap">
+              <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=600&q=80" alt="Velvet Elegance Tailored Blazer" class="product-img">
+              <div class="product-action-buttons">
+                <button class="quick-action-btn" title="Quick View" onclick="openQuickView('nx-102')"><i class="far fa-eye"></i></button>
+                <button class="quick-action-btn" title="Wishlist" onclick="toggleWishlist('nx-102')"><i class="far fa-heart"></i></button>
+                <button class="quick-action-btn" title="Add to Bag" onclick="addToCart('nx-102')"><i class="fas fa-bag-shopping"></i></button>
+              </div>
+            </div>
+            <div class="product-body">
+              <span class="product-cat">Men's Fashion</span>
+              <h3 class="product-name"><a href="product-details.html?id=nx-102">Velvet Elegance Tailored Blazer</a></h3>
+              <div class="product-rating">
+                <span>★★★★★</span> <span class="rating-count">(95 reviews)</span>
+              </div>
+              <div class="product-footer">
+                <div class="price-box">
+                  <span class="price-current">$189.00</span>
+                  <span class="price-original">$240.00</span>
+                </div>
+                <button class="btn btn-sm btn-primary" onclick="addToCart('nx-102')">Add to Bag</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="product-card reveal-on-scroll delay-3">
+            <div class="product-badge-group">
+              <span class="badge badge-gold">Top Rated</span>
+            </div>
+            <div class="product-img-wrap">
+              <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=600&q=80" alt="SonicPro Wireless ANC Studio Headphones" class="product-img">
+              <div class="product-action-buttons">
+                <button class="quick-action-btn" title="Quick View" onclick="openQuickView('nx-103')"><i class="far fa-eye"></i></button>
+                <button class="quick-action-btn" title="Wishlist" onclick="toggleWishlist('nx-103')"><i class="far fa-heart"></i></button>
+                <button class="quick-action-btn" title="Add to Bag" onclick="addToCart('nx-103')"><i class="fas fa-bag-shopping"></i></button>
+              </div>
+            </div>
+            <div class="product-body">
+              <span class="product-cat">Audio & Tech</span>
+              <h3 class="product-name"><a href="product-details.html?id=nx-103">SonicPro Wireless ANC Headphones</a></h3>
+              <div class="product-rating">
+                <span>★★★★★</span> <span class="rating-count">(310 reviews)</span>
+              </div>
+              <div class="product-footer">
+                <div class="price-box">
+                  <span class="price-current">$279.00</span>
+                  <span class="price-original">$320.00</span>
+                </div>
+                <button class="btn btn-sm btn-primary" onclick="addToCart('nx-103')">Add to Bag</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 4 -->
+          <article class="product-card reveal-on-scroll delay-4">
+            <div class="product-badge-group">
+              <span class="badge badge-sale">Save 20%</span>
+            </div>
+            <div class="product-img-wrap">
+              <img src="https://images.unsplash.com/photo-1608248597359-0a67cf5e4c6c?auto=format&fit=crop&w=600&q=80" alt="Radiance Gold Botanical Facial Elixir" class="product-img">
+              <div class="product-action-buttons">
+                <button class="quick-action-btn" title="Quick View" onclick="openQuickView('nx-106')"><i class="far fa-eye"></i></button>
+                <button class="quick-action-btn" title="Wishlist" onclick="toggleWishlist('nx-106')"><i class="far fa-heart"></i></button>
+                <button class="quick-action-btn" title="Add to Bag" onclick="addToCart('nx-106')"><i class="fas fa-bag-shopping"></i></button>
+              </div>
+            </div>
+            <div class="product-body">
+              <span class="product-cat">Beauty & Care</span>
+              <h3 class="product-name"><a href="product-details.html?id=nx-106">Radiance Gold Botanical Facial Elixir</a></h3>
+              <div class="product-rating">
+                <span>★★★★★</span> <span class="rating-count">(175 reviews)</span>
+              </div>
+              <div class="product-footer">
+                <div class="price-box">
+                  <span class="price-current">$95.00</span>
+                  <span class="price-original">$120.00</span>
+                </div>
+                <button class="btn btn-sm btn-primary" onclick="addToCart('nx-106')">Add to Bag</button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. FLASH SALE & DEALS COUNTDOWN BANNER -->
+    <section class="flash-sale-section">
+      <div class="container">
+        <div class="flash-sale-grid">
+          <div>
+            <span class="section-tag" style="color: var(--color-gold);">VIP Flash Vault</span>
+            <h2 class="section-title" style="color: #ffffff; font-size: 2.85rem;">
+              Up to <span class="gold-accent">40% Off</span> Signature Collections.
+            </h2>
+            <p style="color: #d0d0d0; line-height: 1.7; font-size: 1.05rem;">
+              Take advantage of time-locked discounts across flagship audio, designer evening apparel, and Italian leather accessories.
+            </p>
+
+            <div class="countdown-box-wrap">
+              <div class="countdown-unit">
+                <div class="countdown-number" id="cd-hours">48</div>
+                <div class="countdown-label">Hours</div>
+              </div>
+              <div class="countdown-unit">
+                <div class="countdown-number" id="cd-mins">15</div>
+                <div class="countdown-label">Mins</div>
+              </div>
+              <div class="countdown-unit">
+                <div class="countdown-number" id="cd-secs">30</div>
+                <div class="countdown-label">Secs</div>
+              </div>
+            </div>
+
+            <div style="display:flex; gap:1rem; flex-wrap:wrap;">
+              <a href="shop.html?sale=true" class="btn btn-gold">
+                Unlock Flash Deals <i class="fas fa-bolt"></i>
+              </a>
+              <a href="shop.html" class="btn btn-outline" style="color:#fff; border-color: rgba(255,255,255,0.4);">
+                Browse All
+              </a>
+            </div>
+          </div>
+
+          <div style="text-align: center;">
+            <img src="https://images.unsplash.com/photo-1524805444758-089113d48a6d?auto=format&fit=crop&w=700&q=80" alt="Flash Sale" style="border-radius: var(--radius-sm); border: 2px solid rgba(212,168,67,0.4); box-shadow: var(--shadow-gold); max-height: 400px; margin: 0 auto;">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. LUXURY BRANDS STRIP -->
+    <section class="brands-strip">
+      <div class="container">
+        <div class="brands-grid">
+          <div class="brand-item">AURORA</div>
+          <div class="brand-item">MILANO & CO</div>
+          <div class="brand-item">LUMIÈRE</div>
+          <div class="brand-item">VANGUARD</div>
+          <div class="brand-item">SONICPRO</div>
+          <div class="brand-item">KASHMIR ARTISAN</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. CUSTOMER TESTIMONIALS -->
+    <section class="testimonials-section">
+      <div class="container">
+        <div style="text-align: center;">
+          <span class="section-tag">Client Testimonials</span>
+          <h2 class="section-title">What Our Global Patrons Say</h2>
+          <p class="section-subtitle" style="margin: 0 auto;">
+            Experience trusted feedback from verified buyers across London, New York, Dubai, and Singapore.
+          </p>
+        </div>
+
+        <div class="testimonials-grid">
+          <div class="testimonial-card reveal-on-scroll delay-1">
+            <div class="test-stars">★★★★★</div>
+            <p class="test-quote">
+              "The Aura Royal Chronograph surpassed every expectation. Packaging is immaculate with authenticated certificates, and express delivery to Manhattan took barely 48 hours."
+            </p>
+            <div class="test-author-row">
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80" alt="Victoria Sterling" class="test-avatar">
+              <div>
+                <div class="test-name">Victoria Sterling</div>
+                <div class="test-loc">New York, USA • Verified Patron</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card reveal-on-scroll delay-2">
+            <div class="test-stars">★★★★★</div>
+            <p class="test-quote">
+              "NEXORA MALL is my primary destination for both high-end electronics and gourmet pantry essentials. The customer concierge resolved my sizing query within 5 minutes."
+            </p>
+            <div class="test-author-row">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=120&q=80" alt="Alexander Wright" class="test-avatar">
+              <div>
+                <div class="test-name">Alexander Wright</div>
+                <div class="test-loc">London, UK • Verified Patron</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card reveal-on-scroll delay-3">
+            <div class="test-stars">★★★★★</div>
+            <p class="test-quote">
+              "The Nordic Marble Coffee Table is a true architectural statement piece in our living room. Heavy, authentic Carrara stone with flawless gold steel joinery."
+            </p>
+            <div class="test-author-row">
+              <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=120&q=80" alt="Sophia Al-Mansoor" class="test-avatar">
+              <div>
+                <div class="test-name">Sophia Al-Mansoor</div>
+                <div class="test-loc">Dubai, UAE • Verified Patron</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. APP PROMO -->
+    <section class="app-promo-section">
+      <div class="container">
+        <div class="app-promo-grid">
+          <div>
+            <span class="section-tag">Anytime, Anywhere</span>
+            <h2 class="section-title">Download The NEXORA Mobile App</h2>
+            <p style="color: var(--text-secondary); line-height: 1.7; font-size: 1.05rem;">
+              Unlock app-exclusive private drops, real-time live order tracking notifications, personalized AI stylist recommendations, and 1-click Apple Pay & Google Pay checkout.
+            </p>
+            <div class="app-store-badges">
+              <a href="#" class="store-badge-btn">
+                <i class="fab fa-apple" style="font-size: 1.85rem;"></i>
+                <div class="store-badge-text">
+                  <small>Download on the</small>
+                  <strong>Apple App Store</strong>
+                </div>
+              </a>
+              <a href="#" class="store-badge-btn">
+                <i class="fab fa-google-play" style="font-size: 1.65rem;"></i>
+                <div class="store-badge-text">
+                  <small>Get it on</small>
+                  <strong>Google Play</strong>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div style="text-align: center;">
+            <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=600&q=80" alt="NEXORA Mobile App" style="max-height: 380px; border-radius: var(--radius-md); box-shadow: var(--shadow-lg); margin: 0 auto;">
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+
+  <!-- SHARED FAT FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Col 1: Brand & Tagline -->
+        <div>
+          <div class="brand-logo" style="color: #ffffff; margin-bottom: 0.85rem;">
+            NEXORA<span class="logo-accent">.</span>MALL
+          </div>
+          <p style="color: #9c9c9c; line-height: 1.65; margin-bottom: 1.5rem; max-width: 320px;">
+            "Shop Everything. Live Better" — The world's premier digital marketplace delivering authenticated luxury, state-of-the-art tech, and refined lifestyle essentials.
+          </p>
+          <div class="social-links-row">
+            <a href="#" class="social-icon-btn" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-icon-btn" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-icon-btn" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+            <a href="#" class="social-icon-btn" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+
+        <!-- Col 2: Luxury Marketplace -->
+        <div>
+          <h4 class="footer-heading">Marketplace</h4>
+          <ul class="footer-links-list">
+            <li><a href="shop.html">Shop All Products</a></li>
+            <li><a href="shop.html?cat=fashion">Fashion & Apparel</a></li>
+            <li><a href="shop.html?cat=electronics">Electronics & Audio</a></li>
+            <li><a href="shop.html?cat=home">Home & Living</a></li>
+            <li><a href="shop.html?cat=beauty">Beauty & Wellness</a></li>
+            <li><a href="shop.html?cat=grocery">Gourmet Grocery</a></li>
+            <li><a href="shop.html?sale=true">Flash Sale Vault</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Customer Care & Services -->
+        <div>
+          <h4 class="footer-heading">Client Services</h4>
+          <ul class="footer-links-list">
+            <li><a href="account-tracking.html#track">Track Your Order</a></li>
+            <li><a href="faq-policy.html#shipping">Shipping & Global Delivery</a></li>
+            <li><a href="faq-policy.html#returns">Returns & Exchange</a></li>
+            <li><a href="faq-policy.html#faq">Frequently Asked Questions</a></li>
+            <li><a href="account-tracking.html#wishlist">My VIP Wishlist</a></li>
+            <li><a href="contact.html">24/7 Concierge Support</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: About & Governance -->
+        <div>
+          <h4 class="footer-heading">The House</h4>
+          <ul class="footer-links-list">
+            <li><a href="about.html">About NEXORA MALL</a></li>
+            <li><a href="about.html#sustainability">Sustainability & Ethics</a></li>
+            <li><a href="about.html#leadership">Executive Leadership</a></li>
+            <li><a href="faq-policy.html#privacy">Privacy Policy</a></li>
+            <li><a href="faq-policy.html#terms">Terms of Service</a></li>
+            <li><a href="contact.html#locations">Boutique Locations</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 5: Newsletter & App -->
+        <div>
+          <h4 class="footer-heading">VIP Insider Newsletter</h4>
+          <p style="color: #9c9c9c; font-size: 0.8125rem; margin-bottom: 0.85rem;">
+            Join the inner circle for bespoke private sales, new collections, and luxury edits.
+          </p>
+          <form onsubmit="event.preventDefault(); showToast('Welcome to the Nexora VIP Inner Circle!'); this.reset();" style="display:flex; gap: 0.4rem;">
+            <input type="email" placeholder="Enter your email" required style="flex:1; padding: 0.65rem 0.85rem; border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.08); color:#fff; border-radius: var(--radius-xs); font-size: 0.8125rem;">
+            <button type="submit" class="btn btn-gold btn-sm">Join</button>
+          </form>
+          <div style="margin-top: 1.5rem;">
+            <div style="font-size: 0.72rem; text-transform: uppercase; color: #888; letter-spacing: 0.1em; margin-bottom: 0.5rem;">Secure Encrypted Payments</div>
+            <div style="display:flex; gap:0.5rem; font-size: 1.4rem; color: #d4a843;">
+              <i class="fab fa-cc-visa"></i>
+              <i class="fab fa-cc-mastercard"></i>
+              <i class="fab fa-cc-amex"></i>
+              <i class="fab fa-cc-paypal"></i>
+              <i class="fab fa-cc-apple-pay"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Bottom Row -->
+      <div class="footer-bottom-bar">
+        <div>&copy; 2026 NEXORA MALL Inc. All Rights Reserved. "Shop Everything. Live Better".</div>
+        <div style="display:flex; gap: 1.5rem;">
+          <a href="faq-policy.html#privacy">Privacy Notice</a>
+          <a href="faq-policy.html#terms">Terms of Sale</a>
+          <a href="faq-policy.html#shipping">Global Delivery</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- QUICK VIEW MODAL COMPONENT -->
+  <div class="modal-overlay" id="quick-view-modal" role="dialog" aria-modal="true">
+    <div class="modal-card">
+      <button class="modal-close-btn" id="close-modal-btn" aria-label="Close modal">&times;</button>
+      <div style="background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: var(--radius-xs); overflow: hidden; display:flex; align-items:center; justify-content:center;">
+        <img id="qv-img" src="" alt="Product" style="max-height: 340px; object-fit: cover;">
+      </div>
+      <div style="display: flex; flex-direction: column;">
+        <span id="qv-category" class="section-tag" style="margin-bottom: 0.25rem;">CATEGORY</span>
+        <h3 id="qv-title" style="font-size: 1.6rem; margin-bottom: 0.65rem;">Product Name</h3>
+        <div style="display: flex; align-items: baseline; gap: 0.85rem; margin-bottom: 1rem;">
+          <span id="qv-price" style="font-family: var(--font-heading); font-size: 1.65rem; font-weight: 800; color: var(--color-gold);">$0.00</span>
+          <span id="qv-orig-price" style="text-decoration: line-through; color: var(--text-muted); font-size: 0.95rem;">$0.00</span>
+        </div>
+        <p id="qv-desc" style="font-size: 0.875rem; color: var(--text-secondary); line-height: 1.65; margin-bottom: 1.5rem;">
+          Exquisite handcrafted quality designed for longevity and luxury aesthetics.
+        </p>
+        <div style="display: flex; align-items: center; gap: 1rem; margin-top: auto;">
+          <div class="qty-selector">
+            <button class="qty-btn" onclick="const i=document.getElementById('qv-qty-input'); if(parseInt(i.value)>1) i.value=parseInt(i.value)-1;">-</button>
+            <input type="text" id="qv-qty-input" class="qty-input" value="1" readonly>
+            <button class="qty-btn" onclick="const i=document.getElementById('qv-qty-input'); i.value=parseInt(i.value)+1;">+</button>
+          </div>
+          <button class="btn btn-gold" id="qv-add-btn" style="flex:1;">
+            <i class="fas fa-bag-shopping"></i> Add to Bag
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BACK TO TOP BUTTON -->
+  <button class="back-to-top-btn" aria-label="Back to Top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+
+  <script src="js/main.js"></script>
+</body>
+</html>
