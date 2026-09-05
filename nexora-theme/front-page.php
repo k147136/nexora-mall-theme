@@ -35,21 +35,18 @@ if ( ! $has_custom_content ) :
     <section class="hero-slider-section" aria-label="<?php esc_attr_e( 'Featured Collections Carousel', 'nexora-mall' ); ?>">
         <div class="hero-slider-wrap">
             <!-- Slide 1 -->
-            <div class="hero-slide active" style="background-image: url('https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=1800&q=80');">
+            <div class="hero-slide active" style="background-image: url('https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=1800&q=85');">
                 <div class="hero-slide-overlay"></div>
                 <div class="container" style="height: 100%; display: flex; align-items: center;">
                     <div class="hero-slide-content reveal-on-scroll">
-                        <span class="hero-tag"><i class="fas fa-crown"></i> <?php esc_html_e( 'The Autumn Luxury Edit', 'nexora-mall' ); ?></span>
-                        <h1 class="hero-title"><?php esc_html_e( 'Timeless Luxury,', 'nexora-mall' ); ?> <span><?php esc_html_e( 'Unrivaled', 'nexora-mall' ); ?></span> <?php esc_html_e( 'Craftsmanship.', 'nexora-mall' ); ?></h1>
+                        <span class="hero-tag"><i class="fas fa-crown"></i> <?php esc_html_e( 'NEXT-GEN TECH', 'nexora-mall' ); ?></span>
+                        <h1 class="hero-title"><?php esc_html_e( 'Acoustic', 'nexora-mall' ); ?> <span><?php esc_html_e( 'Perfection', 'nexora-mall' ); ?></span> & <?php esc_html_e( 'Future Living.', 'nexora-mall' ); ?></h1>
                         <p class="hero-desc">
-                            <?php esc_html_e( 'Immerse yourself in our curated selection of fine gold horology, bespoke Italian tailoring, and high-jewelry accessories.', 'nexora-mall' ); ?>
+                            <?php esc_html_e( 'Studio-grade wireless acoustics, flagship smart devices, and intelligent luxury living engineered for the discerning professional.', 'nexora-mall' ); ?>
                         </p>
                         <div class="hero-cta-row">
-                            <a href="<?php echo esc_url( home_url( '/shop?cat=accessories' ) ); ?>" class="btn btn-gold">
-                                <?php esc_html_e( 'Explore Collection', 'nexora-mall' ); ?> <i class="fas fa-arrow-right"></i>
-                            </a>
-                            <a href="<?php echo esc_url( home_url( '/shop?sale=true' ) ); ?>" class="btn btn-outline" style="color: #fff; border-color: rgba(255,255,255,0.4);">
-                                <?php esc_html_e( 'View Flash Sale', 'nexora-mall' ); ?>
+                            <a href="<?php echo esc_url( home_url( '/shop?cat=electronics' ) ); ?>" class="btn btn-gold">
+                                <?php esc_html_e( 'SHOP ELECTRONICS', 'nexora-mall' ); ?> <i class="fas fa-arrow-right"></i>
                             </a>
                         </div>
                     </div>
@@ -57,37 +54,18 @@ if ( ! $has_custom_content ) :
             </div>
 
             <!-- Slide 2 -->
-            <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1550009158-9ebf69173e03?auto=format&fit=crop&w=1800&q=80');">
+            <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=1800&q=85');">
                 <div class="hero-slide-overlay"></div>
                 <div class="container" style="height: 100%; display: flex; align-items: center;">
                     <div class="hero-slide-content">
-                        <span class="hero-tag"><i class="fas fa-microchip"></i> <?php esc_html_e( 'Next-Gen Tech', 'nexora-mall' ); ?></span>
-                        <h2 class="hero-title"><?php esc_html_e( 'Acoustic', 'nexora-mall' ); ?> <span><?php esc_html_e( 'Perfection', 'nexora-mall' ); ?></span> & <?php esc_html_e( 'Future Living.', 'nexora-mall' ); ?></h2>
+                        <span class="hero-tag"><i class="fas fa-gem"></i> <?php esc_html_e( 'HAUTE HOROLOGY', 'nexora-mall' ); ?></span>
+                        <h2 class="hero-title"><?php esc_html_e( 'Timeless', 'nexora-mall' ); ?> <span><?php esc_html_e( 'Elegance', 'nexora-mall' ); ?></span> & <?php esc_html_e( 'Precision.', 'nexora-mall' ); ?></h2>
                         <p class="hero-desc">
-                            <?php esc_html_e( 'Studio-grade wireless acoustics, flagship smart devices, and intelligent luxury living engineered for the discerning professional.', 'nexora-mall' ); ?>
+                            <?php esc_html_e( 'Immerse yourself in our curated selection of fine gold horology, bespoke Italian tailoring, and high-jewelry accessories.', 'nexora-mall' ); ?>
                         </p>
                         <div class="hero-cta-row">
-                            <a href="<?php echo esc_url( home_url( '/shop?cat=electronics' ) ); ?>" class="btn btn-gold">
-                                <?php esc_html_e( 'Shop Electronics', 'nexora-mall' ); ?> <i class="fas fa-arrow-right"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Slide 3 -->
-            <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1800&q=80');">
-                <div class="hero-slide-overlay"></div>
-                <div class="container" style="height: 100%; display: flex; align-items: center;">
-                    <div class="hero-slide-content">
-                        <span class="hero-tag"><i class="fas fa-couch"></i> <?php esc_html_e( 'Interior Architecture', 'nexora-mall' ); ?></span>
-                        <h2 class="hero-title"><?php esc_html_e( 'Curated Spaces,', 'nexora-mall' ); ?> <span><?php esc_html_e( 'Refined', 'nexora-mall' ); ?></span> <?php esc_html_e( 'Living.', 'nexora-mall' ); ?></h2>
-                        <p class="hero-desc">
-                            <?php esc_html_e( 'Transform your sanctuaries with handcrafted Italian leather lounges, Carrara marble tables, and sculptural illumination.', 'nexora-mall' ); ?>
-                        </p>
-                        <div class="hero-cta-row">
-                            <a href="<?php echo esc_url( home_url( '/shop?cat=home' ) ); ?>" class="btn btn-gold">
-                                <?php esc_html_e( 'Discover Home & Living', 'nexora-mall' ); ?> <i class="fas fa-arrow-right"></i>
+                            <a href="<?php echo esc_url( home_url( '/shop?cat=accessories' ) ); ?>" class="btn btn-gold">
+                                <?php esc_html_e( 'EXPLORE TIMEPIECES', 'nexora-mall' ); ?> <i class="fas fa-arrow-right"></i>
                             </a>
                         </div>
                     </div>
@@ -101,214 +79,397 @@ if ( ! $has_custom_content ) :
         </div>
     </section>
 
-    <!-- 2. VALUE PROPOSITION STRIP -->
-    <section class="value-props-section">
+    <!-- 2. VALUE PROPOSITION 4-CARD STRIP -->
+    <section class="value-props-section" style="background: var(--bg-card); border-bottom: 1px solid var(--border-color);">
         <div class="container">
             <div class="value-props-grid">
                 <div class="value-card reveal-on-scroll delay-1">
                     <div class="value-icon-box"><i class="fas fa-truck-fast"></i></div>
                     <div>
                         <div class="value-title"><?php esc_html_e( 'Complimentary Global Shipping', 'nexora-mall' ); ?></div>
-                        <div class="value-subtitle"><?php esc_html_e( 'Free express dispatch on orders over $150', 'nexora-mall' ); ?></div>
+                        <div class="value-subtitle"><?php esc_html_e( 'Free express dispatch on all orders over $150', 'nexora-mall' ); ?></div>
                     </div>
                 </div>
                 <div class="value-card reveal-on-scroll delay-2">
                     <div class="value-icon-box"><i class="fas fa-certificate"></i></div>
                     <div>
                         <div class="value-title"><?php esc_html_e( '100% Authenticity Guaranteed', 'nexora-mall' ); ?></div>
-                        <div class="value-subtitle"><?php esc_html_e( 'Directly sourced & certified by master houses', 'nexora-mall' ); ?></div>
+                        <div class="value-subtitle"><?php esc_html_e( 'Directly sourced & certified by the master houses', 'nexora-mall' ); ?></div>
                     </div>
                 </div>
                 <div class="value-card reveal-on-scroll delay-3">
                     <div class="value-icon-box"><i class="fas fa-shield-halved"></i></div>
                     <div>
-                        <div class="value-title"><?php esc_html_e( '30-Day Luxury Concierge Returns', 'nexora-mall' ); ?></div>
-                        <div class="value-subtitle"><?php esc_html_e( 'Complimentary pickup & instant refunds', 'nexora-mall' ); ?></div>
+                        <div class="value-title"><?php esc_html_e( 'Secure Encrypted Checkout', 'nexora-mall' ); ?></div>
+                        <div class="value-subtitle"><?php esc_html_e( '256-bit bank level protection on all transactions', 'nexora-mall' ); ?></div>
                     </div>
                 </div>
                 <div class="value-card reveal-on-scroll delay-4">
-                    <div class="value-icon-box"><i class="fas fa-lock"></i></div>
+                    <div class="value-icon-box"><i class="fas fa-rotate-left"></i></div>
                     <div>
-                        <div class="value-title"><?php esc_html_e( 'End-to-End Encrypted Checkout', 'nexora-mall' ); ?></div>
-                        <div class="value-subtitle"><?php esc_html_e( '256-bit bank grade security & crypto ready', 'nexora-mall' ); ?></div>
+                        <div class="value-title"><?php esc_html_e( '30-Day Hassle-Free Returns', 'nexora-mall' ); ?></div>
+                        <div class="value-subtitle"><?php esc_html_e( 'Complimentary courier pick-up worldwide', 'nexora-mall' ); ?></div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 3. CURATED DEPARTMENTS / CATEGORIES -->
+    <!-- 3. CURATED DEPARTMENTS / CIRCULAR CATEGORIES -->
+    <section class="section-padding" style="background-color: var(--bg-primary); text-align: center;">
+        <div class="container">
+            <div class="section-header reveal-on-scroll" style="margin-bottom: 2.5rem;">
+                <span class="section-tag" style="color: var(--color-gold); font-size: 0.75rem; font-weight: 800; letter-spacing: 0.2em; text-transform: uppercase;"><?php esc_html_e( 'CURATED DEPARTMENTS', 'nexora-mall' ); ?></span>
+                <h2 class="section-title" style="font-size: 2.25rem; font-family: var(--font-heading); margin-top: 0.4rem;"><?php esc_html_e( 'Explore NEXORA Departments', 'nexora-mall' ); ?></h2>
+                <p class="section-desc" style="max-width: 650px; margin: 0.5rem auto 0; font-size: 0.95rem; color: var(--text-secondary);">
+                    <?php esc_html_e( 'From high fashion and haute couture to audio, tech and gourmet pantry reserves, discover premium luxury in every category.', 'nexora-mall' ); ?>
+                </p>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 1.25rem;">
+                <!-- Cat 1 -->
+                <a href="<?php echo esc_url( home_url( '/shop?cat=fashion' ) ); ?>" class="category-pill-card reveal-on-scroll delay-1" style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-sm); padding: 1.5rem 1rem; text-decoration: none; display: flex; flex-direction: column; align-items: center; transition: var(--transition);">
+                    <div style="width: 76px; height: 76px; border-radius: 50%; overflow: hidden; margin-bottom: 0.85rem; border: 2px solid var(--color-gold); box-shadow: var(--shadow-sm);">
+                        <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=300&q=80" alt="Fashion & Apparel" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <h4 style="font-size: 0.9rem; font-family: var(--font-heading); color: var(--text-primary); margin: 0;"><?php esc_html_e( 'Fashion & Apparel', 'nexora-mall' ); ?></h4>
+                    <span style="font-size: 0.75rem; color: var(--text-muted); margin-top: 4px;">120+ <?php esc_html_e( 'Items', 'nexora-mall' ); ?></span>
+                </a>
+
+                <!-- Cat 2 -->
+                <a href="<?php echo esc_url( home_url( '/shop?cat=electronics' ) ); ?>" class="category-pill-card reveal-on-scroll delay-2" style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-sm); padding: 1.5rem 1rem; text-decoration: none; display: flex; flex-direction: column; align-items: center; transition: var(--transition);">
+                    <div style="width: 76px; height: 76px; border-radius: 50%; overflow: hidden; margin-bottom: 0.85rem; border: 2px solid var(--color-gold); box-shadow: var(--shadow-sm);">
+                        <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=300&q=80" alt="Electronics" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <h4 style="font-size: 0.9rem; font-family: var(--font-heading); color: var(--text-primary); margin: 0;"><?php esc_html_e( 'Electronics', 'nexora-mall' ); ?></h4>
+                    <span style="font-size: 0.75rem; color: var(--text-muted); margin-top: 4px;">85+ <?php esc_html_e( 'Items', 'nexora-mall' ); ?></span>
+                </a>
+
+                <!-- Cat 3 -->
+                <a href="<?php echo esc_url( home_url( '/shop?cat=home' ) ); ?>" class="category-pill-card reveal-on-scroll delay-3" style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-sm); padding: 1.5rem 1rem; text-decoration: none; display: flex; flex-direction: column; align-items: center; transition: var(--transition);">
+                    <div style="width: 76px; height: 76px; border-radius: 50%; overflow: hidden; margin-bottom: 0.85rem; border: 2px solid var(--color-gold); box-shadow: var(--shadow-sm);">
+                        <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=300&q=80" alt="Home & Living" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <h4 style="font-size: 0.9rem; font-family: var(--font-heading); color: var(--text-primary); margin: 0;"><?php esc_html_e( 'Home & Living', 'nexora-mall' ); ?></h4>
+                    <span style="font-size: 0.75rem; color: var(--text-muted); margin-top: 4px;">94+ <?php esc_html_e( 'Items', 'nexora-mall' ); ?></span>
+                </a>
+
+                <!-- Cat 4 -->
+                <a href="<?php echo esc_url( home_url( '/shop?cat=beauty' ) ); ?>" class="category-pill-card reveal-on-scroll delay-4" style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-sm); padding: 1.5rem 1rem; text-decoration: none; display: flex; flex-direction: column; align-items: center; transition: var(--transition);">
+                    <div style="width: 76px; height: 76px; border-radius: 50%; overflow: hidden; margin-bottom: 0.85rem; border: 2px solid var(--color-gold); box-shadow: var(--shadow-sm);">
+                        <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=300&q=80" alt="Beauty & Care" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <h4 style="font-size: 0.9rem; font-family: var(--font-heading); color: var(--text-primary); margin: 0;"><?php esc_html_e( 'Beauty & Care', 'nexora-mall' ); ?></h4>
+                    <span style="font-size: 0.75rem; color: var(--text-muted); margin-top: 4px;">64+ <?php esc_html_e( 'Items', 'nexora-mall' ); ?></span>
+                </a>
+
+                <!-- Cat 5 -->
+                <a href="<?php echo esc_url( home_url( '/shop?cat=accessories' ) ); ?>" class="category-pill-card reveal-on-scroll delay-5" style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-sm); padding: 1.5rem 1rem; text-decoration: none; display: flex; flex-direction: column; align-items: center; transition: var(--transition);">
+                    <div style="width: 76px; height: 76px; border-radius: 50%; overflow: hidden; margin-bottom: 0.85rem; border: 2px solid var(--color-gold); box-shadow: var(--shadow-sm);">
+                        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=300&q=80" alt="Accessories" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <h4 style="font-size: 0.9rem; font-family: var(--font-heading); color: var(--text-primary); margin: 0;"><?php esc_html_e( 'Accessories', 'nexora-mall' ); ?></h4>
+                    <span style="font-size: 0.75rem; color: var(--text-muted); margin-top: 4px;">110+ <?php esc_html_e( 'Items', 'nexora-mall' ); ?></span>
+                </a>
+
+                <!-- Cat 6 -->
+                <a href="<?php echo esc_url( home_url( '/shop?cat=grocery' ) ); ?>" class="category-pill-card reveal-on-scroll delay-6" style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-sm); padding: 1.5rem 1rem; text-decoration: none; display: flex; flex-direction: column; align-items: center; transition: var(--transition);">
+                    <div style="width: 76px; height: 76px; border-radius: 50%; overflow: hidden; margin-bottom: 0.85rem; border: 2px solid var(--color-gold); box-shadow: var(--shadow-sm);">
+                        <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=300&q=80" alt="Gourmet Grocery" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <h4 style="font-size: 0.9rem; font-family: var(--font-heading); color: var(--text-primary); margin: 0;"><?php esc_html_e( 'Gourmet Grocery', 'nexora-mall' ); ?></h4>
+                    <span style="font-size: 0.75rem; color: var(--text-muted); margin-top: 4px;">50+ <?php esc_html_e( 'Items', 'nexora-mall' ); ?></span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. BEST SELLING MASTERPIECES -->
+    <section class="section-padding" style="background-color: var(--bg-secondary); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
+        <div class="container">
+            <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 2rem; flex-wrap: wrap; gap: 1rem;">
+                <div>
+                    <span class="section-tag" style="color: var(--color-gold); font-size: 0.75rem; font-weight: 800; letter-spacing: 0.15em; text-transform: uppercase;"><?php esc_html_e( 'SIGNATURE CREATIONS', 'nexora-mall' ); ?></span>
+                    <h2 class="section-title" style="font-size: 2.25rem; font-family: var(--font-heading); margin-top: 0.25rem;"><?php esc_html_e( 'Best Selling Masterpieces', 'nexora-mall' ); ?></h2>
+                    <p style="color: var(--text-secondary); margin: 0.25rem 0 0; font-size: 0.95rem;"><?php esc_html_e( 'The most coveted items celebrated by our clientele worldwide.', 'nexora-mall' ); ?></p>
+                </div>
+                <a href="<?php echo esc_url( home_url( '/shop' ) ); ?>" style="color: var(--text-primary); font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; display: inline-flex; align-items: center; gap: 6px; text-decoration: none;">
+                    <?php esc_html_e( 'VIEW ALL CATALOG', 'nexora-mall' ); ?> <i class="fas fa-arrow-right" style="color: var(--color-gold);"></i>
+                </a>
+            </div>
+
+            <!-- 4 Column Products Grid -->
+            <div class="products-grid" style="grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 1.75rem;">
+                <!-- Product 1 -->
+                <article class="product-card reveal-on-scroll">
+                    <div class="product-badge-group">
+                        <span class="badge badge-sale">SAVE 17%</span>
+                    </div>
+                    <div class="product-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1524805444758-089113d48a6d?auto=format&fit=crop&w=800&q=85" alt="Aura Royal Chronograph Gold Watch" class="product-img" loading="lazy">
+                        <div class="product-action-buttons">
+                            <button class="quick-action-btn" title="Quick View" onclick="openQuickView('nx-101')"><i class="far fa-eye"></i></button>
+                            <button class="quick-action-btn" title="Wishlist" onclick="toggleWishlist('nx-101')"><i class="far fa-heart"></i></button>
+                            <button class="quick-action-btn" title="Add to Bag" onclick="addToCart('nx-101')"><i class="fas fa-bag-shopping"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-body">
+                        <span class="product-cat"><?php esc_html_e( 'LUXURY HOROLOGY', 'nexora-mall' ); ?></span>
+                        <h3 class="product-name"><a href="<?php echo esc_url( home_url( '/product-details?id=nx-101' ) ); ?>"><?php esc_html_e( 'Aura Royal Chronograph Gold Watch', 'nexora-mall' ); ?></a></h3>
+                        <div class="product-rating">
+                            <span>★★★★★</span> <span class="rating-count">(128 reviews)</span>
+                        </div>
+                        <div class="product-footer">
+                            <div class="price-box">
+                                <span class="price-current">$1,250.00</span>
+                                <span class="price-original">$1,500.00</span>
+                            </div>
+                            <button class="btn btn-sm btn-primary" onclick="addToCart('nx-101')"><?php esc_html_e( 'ADD TO BAG', 'nexora-mall' ); ?></button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Product 2 -->
+                <article class="product-card reveal-on-scroll delay-1">
+                    <div class="product-badge-group">
+                        <span class="badge badge-charcoal">VIP EXCLUSIVE</span>
+                    </div>
+                    <div class="product-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=800&q=85" alt="Velvet Premiere Tailored Blazer" class="product-img" loading="lazy">
+                        <div class="product-action-buttons">
+                            <button class="quick-action-btn" title="Quick View" onclick="openQuickView('nx-102')"><i class="far fa-eye"></i></button>
+                            <button class="quick-action-btn" title="Wishlist" onclick="toggleWishlist('nx-102')"><i class="far fa-heart"></i></button>
+                            <button class="quick-action-btn" title="Add to Bag" onclick="addToCart('nx-102')"><i class="fas fa-bag-shopping"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-body">
+                        <span class="product-cat"><?php esc_html_e( "MEN'S FASHION", 'nexora-mall' ); ?></span>
+                        <h3 class="product-name"><a href="<?php echo esc_url( home_url( '/product-details?id=nx-102' ) ); ?>"><?php esc_html_e( 'Velvet Premiere Tailored Blazer', 'nexora-mall' ); ?></a></h3>
+                        <div class="product-rating">
+                            <span>★★★★★</span> <span class="rating-count">(94 reviews)</span>
+                        </div>
+                        <div class="product-footer">
+                            <div class="price-box">
+                                <span class="price-current">$890.00</span>
+                                <span class="price-original">$1,100.00</span>
+                            </div>
+                            <button class="btn btn-sm btn-primary" onclick="addToCart('nx-102')"><?php esc_html_e( 'ADD TO BAG', 'nexora-mall' ); ?></button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Product 3 -->
+                <article class="product-card reveal-on-scroll delay-2">
+                    <div class="product-badge-group">
+                        <span class="badge badge-gold">TOP RATED</span>
+                    </div>
+                    <div class="product-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=85" alt="SonicPro Wireless ANC Headphones" class="product-img" loading="lazy">
+                        <div class="product-action-buttons">
+                            <button class="quick-action-btn" title="Quick View" onclick="openQuickView('nx-103')"><i class="far fa-eye"></i></button>
+                            <button class="quick-action-btn" title="Wishlist" onclick="toggleWishlist('nx-103')"><i class="far fa-heart"></i></button>
+                            <button class="quick-action-btn" title="Add to Bag" onclick="addToCart('nx-103')"><i class="fas fa-bag-shopping"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-body">
+                        <span class="product-cat"><?php esc_html_e( 'AUDIO & TECH', 'nexora-mall' ); ?></span>
+                        <h3 class="product-name"><a href="<?php echo esc_url( home_url( '/product-details?id=nx-103' ) ); ?>"><?php esc_html_e( 'SonicPro Wireless ANC Headphones', 'nexora-mall' ); ?></a></h3>
+                        <div class="product-rating">
+                            <span>★★★★★</span> <span class="rating-count">(210 reviews)</span>
+                        </div>
+                        <div class="product-footer">
+                            <div class="price-box">
+                                <span class="price-current">$450.00</span>
+                                <span class="price-original">$520.00</span>
+                            </div>
+                            <button class="btn btn-sm btn-primary" onclick="addToCart('nx-103')"><?php esc_html_e( 'ADD TO BAG', 'nexora-mall' ); ?></button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Product 4 -->
+                <article class="product-card reveal-on-scroll delay-3">
+                    <div class="product-badge-group">
+                        <span class="badge badge-sale">ORGANIC</span>
+                    </div>
+                    <div class="product-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&w=800&q=85" alt="Radiance Gold Botanical Facial Elixir" class="product-img" loading="lazy">
+                        <div class="product-action-buttons">
+                            <button class="quick-action-btn" title="Quick View" onclick="openQuickView('nx-105')"><i class="far fa-eye"></i></button>
+                            <button class="quick-action-btn" title="Wishlist" onclick="toggleWishlist('nx-105')"><i class="far fa-heart"></i></button>
+                            <button class="quick-action-btn" title="Add to Bag" onclick="addToCart('nx-105')"><i class="fas fa-bag-shopping"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-body">
+                        <span class="product-cat"><?php esc_html_e( 'BEAUTY & CARE', 'nexora-mall' ); ?></span>
+                        <h3 class="product-name"><a href="<?php echo esc_url( home_url( '/product-details?id=nx-105' ) ); ?>"><?php esc_html_e( 'Radiance Gold Botanical Facial Elixir', 'nexora-mall' ); ?></a></h3>
+                        <div class="product-rating">
+                            <span>★★★★★</span> <span class="rating-count">(315 reviews)</span>
+                        </div>
+                        <div class="product-footer">
+                            <div class="price-box">
+                                <span class="price-current">$185.00</span>
+                                <span class="price-original">$220.00</span>
+                            </div>
+                            <button class="btn btn-sm btn-primary" onclick="addToCart('nx-105')"><?php esc_html_e( 'ADD TO BAG', 'nexora-mall' ); ?></button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. VIP FLASH SALE / PRIVATE VAULT SECTION -->
+    <section class="section-padding" style="background: #141414; color: #fff;">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 3rem; align-items: center;" class="flash-vault-layout">
+                <div>
+                    <span class="section-tag" style="color: var(--color-gold); font-size: 0.75rem; font-weight: 800; letter-spacing: 0.15em; text-transform: uppercase;"><?php esc_html_e( 'VIP FLASH VAULT', 'nexora-mall' ); ?></span>
+                    <h2 style="font-size: 2.75rem; font-family: var(--font-heading); color: #fff; margin: 0.5rem 0 1rem; line-height: 1.2;">
+                        Up to <span style="color: var(--color-gold);">40% Off</span> Signature Collections.
+                    </h2>
+                    <p style="color: #cbd5e1; font-size: 1.05rem; margin-bottom: 2rem; max-width: 520px; line-height: 1.6;">
+                        <?php esc_html_e( 'Take advantage of time-locked discounts across flagship audio, designer evening apparels and Italian leather accessories.', 'nexora-mall' ); ?>
+                    </p>
+
+                    <!-- Countdown Boxes -->
+                    <div style="display: flex; gap: 1rem; margin-bottom: 2.25rem;">
+                        <div style="background: #222; border: 1px solid rgba(212,168,67,0.3); border-radius: var(--radius-xs); padding: 0.85rem 1.25rem; text-align: center; min-width: 75px;">
+                            <div style="font-size: 1.75rem; font-weight: 900; color: var(--color-gold); font-family: var(--font-heading);" id="f-days">48</div>
+                            <div style="font-size: 0.65rem; text-transform: uppercase; color: #888; font-weight: 700; letter-spacing: 0.1em;"><?php esc_html_e( 'HOURS', 'nexora-mall' ); ?></div>
+                        </div>
+                        <div style="background: #222; border: 1px solid rgba(212,168,67,0.3); border-radius: var(--radius-xs); padding: 0.85rem 1.25rem; text-align: center; min-width: 75px;">
+                            <div style="font-size: 1.75rem; font-weight: 900; color: var(--color-gold); font-family: var(--font-heading);" id="f-mins">15</div>
+                            <div style="font-size: 0.65rem; text-transform: uppercase; color: #888; font-weight: 700; letter-spacing: 0.1em;"><?php esc_html_e( 'MIN', 'nexora-mall' ); ?></div>
+                        </div>
+                        <div style="background: #222; border: 1px solid rgba(212,168,67,0.3); border-radius: var(--radius-xs); padding: 0.85rem 1.25rem; text-align: center; min-width: 75px;">
+                            <div style="font-size: 1.75rem; font-weight: 900; color: var(--color-gold); font-family: var(--font-heading);" id="f-secs">26</div>
+                            <div style="font-size: 0.65rem; text-transform: uppercase; color: #888; font-weight: 700; letter-spacing: 0.1em;"><?php esc_html_e( 'SECS', 'nexora-mall' ); ?></div>
+                        </div>
+                    </div>
+
+                    <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                        <a href="<?php echo esc_url( home_url( '/shop?sale=true' ) ); ?>" class="btn btn-gold">
+                            <i class="fas fa-bolt"></i> <?php esc_html_e( 'UNLOCK FLASH DEALS', 'nexora-mall' ); ?>
+                        </a>
+                        <a href="<?php echo esc_url( home_url( '/shop' ) ); ?>" class="btn btn-outline" style="color: #fff; border-color: rgba(255,255,255,0.4);">
+                            <?php esc_html_e( 'BROWSE ALL', 'nexora-mall' ); ?>
+                        </a>
+                    </div>
+                </div>
+
+                <div style="position: relative; text-align: center;">
+                    <div style="background: #1c1c1c; border: 1px solid rgba(212,168,67,0.3); border-radius: var(--radius-sm); padding: 1.5rem; display: inline-block; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+                        <img src="https://images.unsplash.com/photo-1524805444758-089113d48a6d?auto=format&fit=crop&w=600&q=85" alt="Aura Royal Chronograph" style="max-height: 320px; width: auto; border-radius: var(--radius-xs);">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. BRAND PARTNERS / LUXURY HOUSES STRIP -->
+    <section style="padding: 2.5rem 0; background: var(--bg-card); border-bottom: 1px solid var(--border-color);">
+        <div class="container">
+            <div style="display: flex; justify-content: space-around; align-items: center; flex-wrap: wrap; gap: 2rem; opacity: 0.85;">
+                <span style="font-family: var(--font-heading); font-size: 1.25rem; font-weight: 800; letter-spacing: 0.15em; color: var(--text-primary);">AURORA</span>
+                <span style="font-family: var(--font-heading); font-size: 1.25rem; font-weight: 800; letter-spacing: 0.15em; color: var(--text-primary);">MILANO & CO</span>
+                <span style="font-family: var(--font-heading); font-size: 1.25rem; font-weight: 800; letter-spacing: 0.15em; color: var(--text-primary);">LUMIÈRE</span>
+                <span style="font-family: var(--font-heading); font-size: 1.25rem; font-weight: 800; letter-spacing: 0.15em; color: var(--text-primary);">VANGUARD</span>
+                <span style="font-family: var(--font-heading); font-size: 1.25rem; font-weight: 800; letter-spacing: 0.15em; color: var(--text-primary);">SONICPRO</span>
+                <span style="font-family: var(--font-heading); font-size: 1.25rem; font-weight: 800; letter-spacing: 0.15em; color: var(--text-primary);">KASHMIR ARTISAN</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. CLIENT TESTIMONIALS / WHAT OUR GLOBAL PATRONS SAY -->
     <section class="section-padding" style="background-color: var(--bg-primary);">
         <div class="container">
-            <div class="section-header reveal-on-scroll">
-                <span class="section-tag"><?php esc_html_e( 'Discover Collections', 'nexora-mall' ); ?></span>
-                <h2 class="section-title"><?php esc_html_e( 'Shop By Exclusive Department', 'nexora-mall' ); ?></h2>
-                <p class="section-desc"><?php esc_html_e( 'Explore signature hand-crafted essentials, high-end electronics, and bespoke fashion crafted for the modern luxury lifestyle.', 'nexora-mall' ); ?></p>
-            </div>
-            <div class="categories-grid">
-                <a href="<?php echo esc_url( home_url( '/shop?cat=fashion' ) ); ?>" class="category-card reveal-on-scroll delay-1">
-                    <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=600&q=80" alt="Fashion & Apparel" class="category-img" loading="lazy">
-                    <div class="category-overlay">
-                        <span class="category-count">120+ <?php esc_html_e( 'Items', 'nexora-mall' ); ?></span>
-                        <h3 class="category-name"><?php esc_html_e( 'Fashion & Apparel', 'nexora-mall' ); ?></h3>
-                        <span class="category-cta"><?php esc_html_e( 'Explore Collection', 'nexora-mall' ); ?> <i class="fas fa-arrow-right"></i></span>
-                    </div>
-                </a>
-                <a href="<?php echo esc_url( home_url( '/shop?cat=electronics' ) ); ?>" class="category-card reveal-on-scroll delay-2">
-                    <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=600&q=80" alt="Electronics & Audio" class="category-img" loading="lazy">
-                    <div class="category-overlay">
-                        <span class="category-count">85+ <?php esc_html_e( 'Items', 'nexora-mall' ); ?></span>
-                        <h3 class="category-name"><?php esc_html_e( 'Electronics & Audio', 'nexora-mall' ); ?></h3>
-                        <span class="category-cta"><?php esc_html_e( 'Explore Collection', 'nexora-mall' ); ?> <i class="fas fa-arrow-right"></i></span>
-                    </div>
-                </a>
-                <a href="<?php echo esc_url( home_url( '/shop?cat=home' ) ); ?>" class="category-card reveal-on-scroll delay-3">
-                    <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=600&q=80" alt="Home & Living" class="category-img" loading="lazy">
-                    <div class="category-overlay">
-                        <span class="category-count">94+ <?php esc_html_e( 'Items', 'nexora-mall' ); ?></span>
-                        <h3 class="category-name"><?php esc_html_e( 'Home & Living', 'nexora-mall' ); ?></h3>
-                        <span class="category-cta"><?php esc_html_e( 'Explore Collection', 'nexora-mall' ); ?> <i class="fas fa-arrow-right"></i></span>
-                    </div>
-                </a>
-                <a href="<?php echo esc_url( home_url( '/shop?cat=beauty' ) ); ?>" class="category-card reveal-on-scroll delay-4">
-                    <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=600&q=80" alt="Beauty & Personal Care" class="category-img" loading="lazy">
-                    <div class="category-overlay">
-                        <span class="category-count">64+ <?php esc_html_e( 'Items', 'nexora-mall' ); ?></span>
-                        <h3 class="category-name"><?php esc_html_e( 'Beauty & Skincare', 'nexora-mall' ); ?></h3>
-                        <span class="category-cta"><?php esc_html_e( 'Explore Collection', 'nexora-mall' ); ?> <i class="fas fa-arrow-right"></i></span>
-                    </div>
-                </a>
-                <a href="<?php echo esc_url( home_url( '/shop?cat=accessories' ) ); ?>" class="category-card reveal-on-scroll delay-5">
-                    <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=600&q=80" alt="Watches & Accessories" class="category-img" loading="lazy">
-                    <div class="category-overlay">
-                        <span class="category-count">110+ <?php esc_html_e( 'Items', 'nexora-mall' ); ?></span>
-                        <h3 class="category-name"><?php esc_html_e( 'Watches & Accessories', 'nexora-mall' ); ?></h3>
-                        <span class="category-cta"><?php esc_html_e( 'Explore Collection', 'nexora-mall' ); ?> <i class="fas fa-arrow-right"></i></span>
-                    </div>
-                </a>
-                <a href="<?php echo esc_url( home_url( '/shop?cat=grocery' ) ); ?>" class="category-card reveal-on-scroll delay-6">
-                    <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=600&q=80" alt="Gourmet Grocery" class="category-img" loading="lazy">
-                    <div class="category-overlay">
-                        <span class="category-count">50+ <?php esc_html_e( 'Items', 'nexora-mall' ); ?></span>
-                        <h3 class="category-name"><?php esc_html_e( 'Gourmet Grocery', 'nexora-mall' ); ?></h3>
-                        <span class="category-cta"><?php esc_html_e( 'Explore Collection', 'nexora-mall' ); ?> <i class="fas fa-arrow-right"></i></span>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- 4. SIGNATURE PRODUCTS GRID (Tabs & Filter) -->
-    <section class="section-padding" style="background-color: var(--bg-secondary);">
-        <div class="container">
-            <div class="section-header reveal-on-scroll">
-                <span class="section-tag"><?php esc_html_e( 'Curated Showcase', 'nexora-mall' ); ?></span>
-                <h2 class="section-title"><?php esc_html_e( 'Featured Luxury Arrivals', 'nexora-mall' ); ?></h2>
-                <p class="section-desc"><?php esc_html_e( 'Top-selling bespoke creations and limited releases, rigorously vetted for authenticity.', 'nexora-mall' ); ?></p>
+            <div class="section-header reveal-on-scroll" style="text-align: center; margin-bottom: 3rem;">
+                <span class="section-tag" style="color: var(--color-gold); font-size: 0.75rem; font-weight: 800; letter-spacing: 0.2em; text-transform: uppercase;"><?php esc_html_e( 'CLIENT TESTIMONIALS', 'nexora-mall' ); ?></span>
+                <h2 class="section-title" style="font-size: 2.25rem; font-family: var(--font-heading); margin-top: 0.4rem;"><?php esc_html_e( 'What Our Global Patrons Say', 'nexora-mall' ); ?></h2>
+                <p class="section-desc" style="max-width: 600px; margin: 0.5rem auto 0; color: var(--text-secondary);">
+                    <?php esc_html_e( 'Experience trusted feedback from verified buyers across London, New York, Dubai, and Singapore.', 'nexora-mall' ); ?>
+                </p>
             </div>
 
-            <!-- Tab Filters -->
-            <div class="product-tabs-nav reveal-on-scroll">
-                <button class="product-tab-btn active" onclick="filterProducts('all', this)"><?php esc_html_e( 'All Items', 'nexora-mall' ); ?></button>
-                <button class="product-tab-btn" onclick="filterProducts('fashion', this)"><?php esc_html_e( 'Fashion', 'nexora-mall' ); ?></button>
-                <button class="product-tab-btn" onclick="filterProducts('electronics', this)"><?php esc_html_e( 'Electronics', 'nexora-mall' ); ?></button>
-                <button class="product-tab-btn" onclick="filterProducts('home', this)"><?php esc_html_e( 'Home & Living', 'nexora-mall' ); ?></button>
-                <button class="product-tab-btn" onclick="filterProducts('accessories', this)"><?php esc_html_e( 'Accessories', 'nexora-mall' ); ?></button>
-            </div>
-
-            <!-- Products Grid -->
-            <div class="products-grid" id="main-products-grid">
-                <?php
-                // Display WooCommerce products if available, else standard fallback
-                $has_wc_products = false;
-                if ( class_exists( 'WooCommerce' ) ) {
-                    $wc_args = array(
-                        'post_type'      => 'product',
-                        'posts_per_page' => 8,
-                        'status'         => 'publish',
-                    );
-                    $wc_query = new WP_Query( $wc_args );
-                    if ( $wc_query->have_posts() ) {
-                        $has_wc_products = true;
-                        while ( $wc_query->have_posts() ) {
-                            $wc_query->the_post();
-                            wc_get_template_part( 'content', 'product' );
-                        }
-                        wp_reset_postdata();
-                    }
-                }
-
-                if ( ! $has_wc_products ) :
-                    $demo_items = array(
-                        array('id'=>'nx-101','cat_slug'=>'accessories','name'=>'Aura Royal Chronograph Watch','cat'=>'Watches & Accessories','price'=>'$1,250.00','orig'=>'$1,500.00','badge'=>'Bestseller','badge_cls'=>'badge-gold','img'=>'https://images.unsplash.com/photo-1524805444758-089113d48a6d?auto=format&fit=crop&w=800&q=85','reviews'=>128),
-                        array('id'=>'nx-102','cat_slug'=>'fashion','name'=>'Sovereign Tailored Velvet Tuxedo','cat'=>"Men's Fashion",'price'=>'$890.00','orig'=>'$1,100.00','badge'=>'VIP Exclusive','badge_cls'=>'badge-charcoal','img'=>'https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=800&q=85','reviews'=>94),
-                        array('id'=>'nx-103','cat_slug'=>'electronics','name'=>'Sonance Spatial Hi-Fi Headphones','cat'=>'Electronics & Audio','price'=>'$450.00','orig'=>'$520.00','badge'=>'Audiophile','badge_cls'=>'badge-sale','img'=>'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=85','reviews'=>210),
-                        array('id'=>'nx-104','cat_slug'=>'home','name'=>'Nordic Minimalist Marble Coffee Table','cat'=>'Home & Living','price'=>'$1,650.00','orig'=>'$1,950.00','badge'=>'Statement Piece','badge_cls'=>'badge-gold','img'=>'https://images.unsplash.com/photo-1533090161767-e6ffed986c88?auto=format&fit=crop&w=800&q=85','reviews'=>47),
-                        array('id'=>'nx-105','cat_slug'=>'beauty','name'=>"L'Étoile Cellular Repair Face Serum",'cat'=>'Beauty & Personal Care','price'=>'$185.00','orig'=>'$220.00','badge'=>'Organic Extract','badge_cls'=>'badge-gold','img'=>'https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&w=800&q=85','reviews'=>315),
-                        array('id'=>'nx-106','cat_slug'=>'grocery','name'=>'Tuscan Cold-Pressed Reserve Olive Oil','cat'=>'Gourmet Grocery','price'=>'$68.00','orig'=>'$80.00','badge'=>'Estate Bottled','badge_cls'=>'badge-charcoal','img'=>'https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?auto=format&fit=crop&w=800&q=85','reviews'=>88),
-                        array('id'=>'nx-107','cat_slug'=>'fashion','name'=>'Lumière Silk Evening Slip Dress','cat'=>"Women's Fashion",'price'=>'$520.00','orig'=>'$650.00','badge'=>'Runway 2026','badge_cls'=>'badge-sale','img'=>'https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=800&q=85','reviews'=>76),
-                        array('id'=>'nx-108','cat_slug'=>'accessories','name'=>'Florentine Handcrafted Leather Briefcase','cat'=>'Luxury Accessories','price'=>'$780.00','orig'=>'$920.00','badge'=>'Full-Grain','badge_cls'=>'badge-gold','img'=>'https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=800&q=85','reviews'=>64),
-                    );
-                    foreach ( $demo_items as $prod ) : ?>
-                    <article class="product-card reveal-on-scroll" data-category="<?php echo esc_attr( $prod['cat_slug'] ); ?>">
-                        <div class="product-badge-group">
-                            <span class="badge <?php echo esc_attr( $prod['badge_cls'] ); ?>"><?php echo esc_html( $prod['badge'] ); ?></span>
-                        </div>
-                        <div class="product-img-wrap">
-                            <img src="<?php echo esc_url( $prod['img'] ); ?>" alt="<?php echo esc_attr( $prod['name'] ); ?>" class="product-img" loading="lazy">
-                            <div class="product-action-buttons">
-                                <button class="quick-action-btn" title="<?php esc_attr_e( 'Quick View', 'nexora-mall' ); ?>" onclick="openQuickView('<?php echo esc_js( $prod['id'] ); ?>')"><i class="far fa-eye"></i></button>
-                                <button class="quick-action-btn" title="<?php esc_attr_e( 'Wishlist', 'nexora-mall' ); ?>" onclick="toggleWishlist('<?php echo esc_js( $prod['id'] ); ?>')"><i class="far fa-heart"></i></button>
-                                <button class="quick-action-btn" title="<?php esc_attr_e( 'Add to Bag', 'nexora-mall' ); ?>" onclick="addToCart('<?php echo esc_js( $prod['id'] ); ?>')"><i class="fas fa-bag-shopping"></i></button>
-                            </div>
-                        </div>
-                        <div class="product-body">
-                            <span class="product-cat"><?php echo esc_html( $prod['cat'] ); ?></span>
-                            <h3 class="product-name"><a href="<?php echo esc_url( home_url( '/shop' ) ); ?>"><?php echo esc_html( $prod['name'] ); ?></a></h3>
-                            <div class="product-rating">
-                                <span>★★★★★</span> <span class="rating-count">(<?php echo esc_html( $prod['reviews'] ); ?>)</span>
-                            </div>
-                            <div class="product-footer">
-                                <div class="price-box">
-                                    <span class="price-current"><?php echo esc_html( $prod['price'] ); ?></span>
-                                    <span class="price-original"><?php echo esc_html( $prod['orig'] ); ?></span>
-                                </div>
-                                <button class="btn btn-sm btn-primary" onclick="addToCart('<?php echo esc_js( $prod['id'] ); ?>')"><?php esc_html_e( 'Add to Bag', 'nexora-mall' ); ?></button>
-                            </div>
-                        </div>
-                    </article>
-                    <?php endforeach;
-                endif;
-                ?>
-            </div>
-
-            <div style="text-align: center; margin-top: 3.5rem;">
-                <a href="<?php echo esc_url( home_url( '/shop' ) ); ?>" class="btn btn-gold" style="padding: 0.9rem 2.5rem; font-size: 0.95rem;">
-                    <?php esc_html_e( 'Explore All 500+ Items', 'nexora-mall' ); ?> <i class="fas fa-arrow-right"></i>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- 5. FLASH DEALS / TIME-LOCKED OFFERS -->
-    <section class="section-padding flash-deals-section" style="background: linear-gradient(135deg, #181818 0%, #121212 100%);">
-        <div class="container">
-            <div class="flash-deals-banner reveal-on-scroll">
-                <div class="flash-deals-info">
-                    <span class="badge badge-sale" style="margin-bottom: 1rem; font-size: 0.8rem;"><i class="fas fa-bolt"></i> <?php esc_html_e( 'Limited-Time Vault', 'nexora-mall' ); ?></span>
-                    <h2 style="font-size: 2.5rem; color: #ffffff; margin-bottom: 0.75rem; font-family: var(--font-heading);"><?php esc_html_e( 'The VIP Private Flash Sale', 'nexora-mall' ); ?></h2>
-                    <p style="color: #cbd5e1; margin-bottom: 1.75rem; font-size: 1.05rem;">
-                        <?php esc_html_e( 'Access private discounts up to 40% off on coveted luxury timepieces, couture dresses, and flagship spatial audio.', 'nexora-mall' ); ?>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                <!-- Review 1 -->
+                <div class="testimonial-card" style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-sm); padding: 2rem; box-shadow: var(--shadow-sm);">
+                    <div style="color: var(--color-gold); font-size: 1.1rem; margin-bottom: 1rem;">★★★★★</div>
+                    <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; margin-bottom: 1.5rem;">
+                        "The Aura Royal Chronograph timepiece is sheer master craftsmanship. Packaging is immaculate with authenticated certificates and express delivery to Manhattan in absolutely no time."
                     </p>
-                    <div class="countdown-timer" id="flash-countdown">
-                        <div class="countdown-unit"><span class="countdown-val" id="count-days">02</span><span class="countdown-lbl"><?php esc_html_e( 'Days', 'nexora-mall' ); ?></span></div>
-                        <div class="countdown-unit"><span class="countdown-val" id="count-hours">14</span><span class="countdown-lbl"><?php esc_html_e( 'Hours', 'nexora-mall' ); ?></span></div>
-                        <div class="countdown-unit"><span class="countdown-val" id="count-mins">36</span><span class="countdown-lbl"><?php esc_html_e( 'Mins', 'nexora-mall' ); ?></span></div>
-                        <div class="countdown-unit"><span class="countdown-val" id="count-secs">48</span><span class="countdown-lbl"><?php esc_html_e( 'Secs', 'nexora-mall' ); ?></span></div>
+                    <div style="display: flex; align-items: center; gap: 0.85rem;">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80" alt="Victoria Sterling" style="width: 44px; height: 44px; border-radius: 50%; object-fit: cover;">
+                        <div>
+                            <h4 style="font-size: 0.9rem; margin: 0; color: var(--text-primary); font-family: var(--font-heading);">Victoria Sterling</h4>
+                            <span style="font-size: 0.75rem; color: var(--text-muted);">New York, USA • Verified Patron</span>
+                        </div>
                     </div>
-                    <div style="margin-top: 2rem;">
-                        <a href="<?php echo esc_url( home_url( '/shop?sale=true' ) ); ?>" class="btn btn-gold"><?php esc_html_e( 'Unlock Private Vault', 'nexora-mall' ); ?> <i class="fas fa-key"></i></a>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="testimonial-card" style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-sm); padding: 2rem; box-shadow: var(--shadow-sm);">
+                    <div style="color: var(--color-gold); font-size: 1.1rem; margin-bottom: 1rem;">★★★★★</div>
+                    <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; margin-bottom: 1.5rem;">
+                        "NEXORA MALL is my premier destination for both high-end electronics and gourmet pantry essentials. The customer concierge resolved my sizing query within 5 minutes."
+                    </p>
+                    <div style="display: flex; align-items: center; gap: 0.85rem;">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=120&q=80" alt="Alexander Wright" style="width: 44px; height: 44px; border-radius: 50%; object-fit: cover;">
+                        <div>
+                            <h4 style="font-size: 0.9rem; margin: 0; color: var(--text-primary); font-family: var(--font-heading);">Alexander Wright</h4>
+                            <span style="font-size: 0.75rem; color: var(--text-muted);">London, UK • Verified Patron</span>
+                        </div>
                     </div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="testimonial-card" style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-sm); padding: 2rem; box-shadow: var(--shadow-sm);">
+                    <div style="color: var(--color-gold); font-size: 1.1rem; margin-bottom: 1rem;">★★★★★</div>
+                    <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; margin-bottom: 1.5rem;">
+                        "The Nordic Marble Coffee Table is a true architectural statement piece in our living room. 100% authentic Carrara tone with flawless gold-accent joinery."
+                    </p>
+                    <div style="display: flex; align-items: center; gap: 0.85rem;">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=120&q=80" alt="Sophia Al-Mansoor" style="width: 44px; height: 44px; border-radius: 50%; object-fit: cover;">
+                        <div>
+                            <h4 style="font-size: 0.9rem; margin: 0; color: var(--text-primary); font-family: var(--font-heading);">Sophia Al-Mansoor</h4>
+                            <span style="font-size: 0.75rem; color: var(--text-muted);">Dubai, UAE • Verified Patron</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. MOBILE APP DOWNLOAD SECTION -->
+    <section class="section-padding" style="background-color: var(--bg-secondary); border-top: 1px solid var(--border-color);">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center;" class="app-download-grid">
+                <div>
+                    <span class="section-tag" style="color: var(--color-gold); font-size: 0.75rem; font-weight: 800; letter-spacing: 0.15em; text-transform: uppercase;"><?php esc_html_e( 'ANYTIME, ANYWHERE', 'nexora-mall' ); ?></span>
+                    <h2 style="font-size: 2.5rem; font-family: var(--font-heading); color: var(--text-primary); margin: 0.5rem 0 1rem;"><?php esc_html_e( 'Download The NEXORA Mobile App', 'nexora-mall' ); ?></h2>
+                    <p style="color: var(--text-secondary); font-size: 1.05rem; line-height: 1.6; margin-bottom: 2rem;">
+                        <?php esc_html_e( 'Unlock app-exclusive private drops, real-time live order tracking notifications, personalized stylist recommendations, and 1-click Apple Pay & Google Pay checkout.', 'nexora-mall' ); ?>
+                    </p>
+                    <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                        <a href="#" class="btn btn-primary" style="display: inline-flex; align-items: center; gap: 8px;">
+                            <i class="fab fa-apple" style="font-size: 1.3rem;"></i>
+                            <div style="text-align: left; line-height: 1.2;">
+                                <div style="font-size: 0.65rem; opacity: 0.8;"><?php esc_html_e( 'Download on the', 'nexora-mall' ); ?></div>
+                                <div style="font-size: 0.85rem; font-weight: 800;"><?php esc_html_e( 'App Store', 'nexora-mall' ); ?></div>
+                            </div>
+                        </a>
+                        <a href="#" class="btn btn-primary" style="display: inline-flex; align-items: center; gap: 8px;">
+                            <i class="fab fa-google-play" style="font-size: 1.15rem;"></i>
+                            <div style="text-align: left; line-height: 1.2;">
+                                <div style="font-size: 0.65rem; opacity: 0.8;"><?php esc_html_e( 'GET IT ON', 'nexora-mall' ); ?></div>
+                                <div style="font-size: 0.85rem; font-weight: 800;"><?php esc_html_e( 'Google Play', 'nexora-mall' ); ?></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div style="text-align: center;">
+                    <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=700&q=80" alt="NEXORA Mobile App" style="border-radius: var(--radius-md); box-shadow: var(--shadow-lg); max-height: 380px; width: auto; margin: 0 auto;">
                 </div>
             </div>
         </div>
