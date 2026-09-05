@@ -1,38 +1,39 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 80" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 64" width="100%" height="100%">
   <defs>
-    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#f3d078" />
-      <stop offset="50%" stop-color="#d4a843" />
-      <stop offset="100%" stop-color="#a67c1e" />
+    <linearGradient id="siteGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FCE588" />
+      <stop offset="45%" stop-color="#D4A843" />
+      <stop offset="100%" stop-color="#9A701E" />
     </linearGradient>
-    <linearGradient id="silverGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#ffffff" />
-      <stop offset="100%" stop-color="#d1d5db" />
+    <linearGradient id="pureWhite" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="100%" stop-color="#E5E7EB" />
     </linearGradient>
-    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000000" flood-opacity="0.4"/>
-    </filter>
   </defs>
 
-  <!-- Luxury Diamond Icon Mark -->
-  <g transform="translate(10, 14)">
-    <polygon points="26,0 52,26 26,52 0,26" fill="none" stroke="url(#goldGrad)" stroke-width="2.5" />
-    <polygon points="26,8 44,26 26,44 8,26" fill="url(#goldGrad)" opacity="0.18" />
-    <!-- Inner Sparkle -->
-    <circle cx="26" cy="26" r="4" fill="url(#goldGrad)" />
-    <path d="M 26 12 L 26 40 M 12 26 L 40 26" stroke="url(#goldGrad)" stroke-width="1.5" stroke-linecap="round"/>
+  <!-- Left Luxury Icon / Crest -->
+  <g transform="translate(4, 8)">
+    <!-- Diamond Outer -->
+    <polygon points="24,0 48,24 24,48 0,24" fill="none" stroke="url(#siteGold)" stroke-width="2.2" stroke-linejoin="round"/>
+    <polygon points="24,7 41,24 24,41 7,24" fill="url(#siteGold)" opacity="0.15" />
+    <!-- Inner Sparkle Cross -->
+    <line x1="24" y1="11" x2="24" y2="37" stroke="url(#siteGold)" stroke-width="1.8" stroke-linecap="round"/>
+    <line x1="11" y1="24" x2="37" y2="24" stroke="url(#siteGold)" stroke-width="1.8" stroke-linecap="round"/>
+    <circle cx="24" cy="24" r="3.2" fill="#FFF" />
   </g>
 
-  <!-- Typography -->
-  <!-- "NEXORA" -->
-  <text x="76" y="47" font-family="'Cinzel', 'Playfair Display', 'Trajan Pro', 'Georgia', serif" font-size="34" font-weight="900" letter-spacing="3" fill="url(#silverGrad)" filter="url(#glow)">NEXORA</text>
-  
-  <!-- Dot "." Accent -->
-  <text x="246" y="47" font-family="'Cinzel', 'Playfair Display', serif" font-size="38" font-weight="900" fill="url(#goldGrad)">.</text>
+  <!-- Main Wordmark Typography -->
+  <g transform="translate(68, 0)">
+    <!-- NEXORA -->
+    <text x="0" y="38" font-family="'Cinzel', 'Playfair Display', 'Georgia', 'Times New Roman', serif" font-size="30" font-weight="900" letter-spacing="2" fill="url(#pureWhite)">NEXORA</text>
+    
+    <!-- Accent Dot -->
+    <circle cx="152" cy="34" r="3.5" fill="url(#siteGold)" />
 
-  <!-- "MALL" -->
-  <text x="260" y="47" font-family="'Cinzel', 'Playfair Display', serif" font-size="34" font-weight="900" letter-spacing="3" fill="url(#goldGrad)" filter="url(#glow)">MALL</text>
+    <!-- MALL -->
+    <text x="164" y="38" font-family="'Cinzel', 'Playfair Display', 'Georgia', 'Times New Roman', serif" font-size="30" font-weight="900" letter-spacing="2" fill="url(#siteGold)">MALL</text>
 
-  <!-- Subtitle Tag: "LUXURY MARKETPLACE" -->
-  <text x="78" y="66" font-family="'Montserrat', 'Inter', 'Helvetica Neue', sans-serif" font-size="9.5" font-weight="700" letter-spacing="7" fill="url(#goldGrad)" opacity="0.95">LUXURY MARKETPLACE</text>
+    <!-- Subtitle: LUXURY MARKETPLACE -->
+    <text x="2" y="54" font-family="'Montserrat', 'Inter', 'Segoe UI', sans-serif" font-size="8.5" font-weight="800" letter-spacing="5.5" fill="url(#siteGold)" opacity="0.95">LUXURY MARKETPLACE</text>
+  </g>
 </svg>
