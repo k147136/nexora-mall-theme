@@ -143,3 +143,37 @@ add_action( 'plugins_loaded', function() {
         require_once NEXORA_DIR . '/inc/elementor/elementor.php';
     }
 } );
+
+
+/**
+ * 5. Automatic Template Fallback Router
+ */
+function nexora_auto_template_include( $template ) {
+    $req = trim( parse_url( $_SERVER['REQUEST_URI'], PHP_URL_PATH ), '/' );
+    if ( $req === 'shop' || strpos( $req, 'shop' ) === 0 ) {
+        $t = NEXORA_DIR . '/page-shop.php';
+        if ( file_exists( $t ) ) { return $t; }
+    }
+    if ( $req === 'about' || strpos( $req, 'about' ) === 0 ) {
+        $t = NEXORA_DIR . '/page-about.php';
+        if ( file_exists( $t ) ) { return $t; }
+    }
+    if ( $req === 'contact' || strpos( $req, 'contact' ) === 0 ) {
+        $t = NEXORA_DIR . '/page-contact.php';
+        if ( file_exists( $t ) ) { return $t; }
+    }
+    if ( $req === 'faq-policy' || $req === 'faq' || strpos( $req, 'faq' ) === 0 ) {
+        $t = NEXORA_DIR . '/page-faq.php';
+        if ( file_exists( $t ) ) { return $t; }
+    }
+    if ( $req === 'account-tracking' || $req === 'tracking' || strpos( $req, 'tracking' ) === 0 ) {
+        $t = NEXORA_DIR . '/page-tracking.php';
+        if ( file_exists( $t ) ) { return $t; }
+    }
+    if ( $req === 'blog' || strpos( $req, 'blog' ) === 0 ) {
+        $t = NEXORA_DIR . '/page-blog.php';
+        if ( file_exists( $t ) ) { return $t; }
+    }
+    return $template;
+}
+add_filter( 'template_include', 'nexora_auto_template_include' );
