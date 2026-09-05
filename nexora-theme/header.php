@@ -33,11 +33,16 @@
             <i class="fas fa-bars"></i>
         </button>
 
-        <!-- Luxury Brand Logo -->
-        <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="brand-logo" aria-label="NEXORA MALL Homepage">
-            <span class="brand-title">NEXORA<span class="logo-accent">.</span>MALL</span>
-            <span class="logo-tag"><?php esc_html_e( 'LUXURY MARKETPLACE', 'nexora-mall' ); ?></span>
-        </a>
+                <!-- Luxury Brand Logo -->
+        <div class="brand-logo-wrap">
+            <?php if ( function_exists( 'has_custom_logo' ) && has_custom_logo() ) : ?>
+                <?php the_custom_logo(); ?>
+            <?php else : ?>
+                <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="brand-logo custom-logo-link" rel="home" aria-label="<?php esc_attr_e( 'NEXORA MALL Homepage', 'nexora-mall' ); ?>">
+                    <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/logo.png' ); ?>" alt="<?php bloginfo( 'name' ); ?>" class="custom-logo site-logo-img" />
+                </a>
+            <?php endif; ?>
+        </div>
 
         <!-- Search Bar -->
         <div class="header-search-wrap">
@@ -150,9 +155,15 @@
 <div class="mobile-nav-overlay" onclick="toggleMobileNavDrawer()"></div>
 <div class="mobile-nav-drawer">
     <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-color); padding-bottom: 1rem;">
-        <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="brand-logo" style="text-decoration: none;">
-            <span class="brand-title" style="font-size: 1.4rem;">NEXORA<span class="logo-accent">.</span>MALL</span>
-        </a>
+                <div class="brand-logo-wrap">
+            <?php if ( function_exists( 'has_custom_logo' ) && has_custom_logo() ) : ?>
+                <?php the_custom_logo(); ?>
+            <?php else : ?>
+                <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="brand-logo custom-logo-link" rel="home">
+                    <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/logo.png' ); ?>" alt="<?php bloginfo( 'name' ); ?>" class="custom-logo site-logo-img" style="max-height: 28px;" />
+                </a>
+            <?php endif; ?>
+        </div>
         <button class="mobile-drawer-close action-btn" onclick="toggleMobileNavDrawer()" aria-label="<?php esc_attr_e( 'Close Menu', 'nexora-mall' ); ?>"><i class="fas fa-xmark"></i></button>
     </div>
     <div style="margin: 1.25rem 0;">
