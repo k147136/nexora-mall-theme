@@ -1,22 +1,55 @@
 <?php
 /**
- * One Click Demo Import Integration
+ * Nexora Mall - Automatic Demo Homepage & Elementor Configuration Helper
  *
  * @package Nexora_Mall
  */
 
-function nexora_import_files() {
-    return array(
-        array(
-            'import_file_name'             => 'Nexora Luxury Mall Demo',
-            'categories'                   => array( 'E-Commerce', 'Luxury', 'Marketplace' ),
-            'local_import_file'            => NEXORA_DIR . '/demo-data/content.xml',
-            'local_import_widget_file'     => NEXORA_DIR . '/demo-data/widgets.wie',
-            'local_import_customizer_file' => NEXORA_DIR . '/demo-data/customizer.dat',
-            'import_preview_image_url'     => 'https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=600&q=80',
-            'import_notice'                => __( 'After you import this demo, make sure to set your Home Page in Settings > Reading.', 'nexora-mall' ),
-            'preview_url'                  => 'https://nexoramall.com',
-        ),
-    );
+if ( ! defined( 'ABSPATH' ) ) {
+    exit;
 }
-add_filter( 'ocdi/import_files', 'nexora_import_files' );
+
+function nexora_auto_configure_elementor_homepage() {
+    // 1. Check if 'Home' page exists
+    $home_page = get_page_by_path( 'home' );
+    if ( ! $home_page ) {
+        $home_page = get_page_by_title( 'Home' );
+    }
+
+    if ( ! $home_page ) {
+        $home_id = wp_insert_post( array(
+            'post_title'     => 'Home',
+            'post_name'      => 'home',
+            'post_status'    => 'publish',
+            'post_type'      => 'page',
+            'post_content'   => '',
+        ) );
+    } else {
+        $home_id = $home_page->ID;
+    }
+
+    if ( $home_id && ! is_wp_error( $home_id ) ) {
+        update_post_meta( $home_id, '_wp_page_template', 'template-elementor-fullwidth.php' );
+        update_option( 'show_on_front', 'page' );
+        update_option( 'page_on_front', $home_id );
+    }
+
+    // 2. Check if 'Shop' page exists
+    $shop_page = get_page_by_path( 'shop' );
+    if ( ! $shop_page ) {
+        $shop_page = get_page_by_title( 'Shop' );
+    }
+    if ( ! $shop_page ) {
+        $shop_id = wp_insert_post( array(
+            'post_title'   => 'Shop',
+            'post_name'    => 'shop',
+            'post_status'  => 'publish',
+            'post_type'    => 'page',
+            'post_content' => '',
+        ) );
+        if ( $shop_id && ! is_wp_error( $shop_id ) ) {
+            update_post_meta( $shop_id, '_wp_page_template', 'page-shop.php' );
+        }
+    }
+}
+add_action( 'after_switch_theme', 'nexora_auto_configure_elementor_homepage' );
