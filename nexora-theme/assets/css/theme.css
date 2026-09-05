@@ -1,3 +1,35 @@
+
+/* Brand Logo Container & Image */
+.brand-logo-wrap {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.brand-logo-wrap .custom-logo-link,
+.brand-logo-wrap .brand-logo {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.brand-logo-wrap img.custom-logo,
+.brand-logo-wrap img.site-logo-img,
+.brand-logo img {
+  max-width: 220px;
+  max-height: 46px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  transition: transform var(--transition);
+}
+
+.brand-logo-wrap .custom-logo-link:hover img,
+.brand-logo-wrap .brand-logo:hover img {
+  transform: scale(1.02);
+}
+
 /* ==========================================================================
    NEXORA MALL - MASTER STYLESHEET (ELEGANT & LUXURY DESIGN SYSTEM)
    ========================================================================== */
@@ -3073,5 +3105,199 @@ html, body {
 
   .cart-header-cta {
     padding: 0.28rem 0.45rem !important;
+  }
+}
+
+
+/* ==========================================================================
+   MOBILE & TABLET RESPONSIVE HEADER STYLES
+   ========================================================================== */
+@media (max-width: 991px) {
+  .site-header {
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 1000 !important;
+    background-color: var(--bg-primary) !important;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.15) !important;
+  }
+
+  .header-main {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    height: 56px !important;
+    padding: 0 12px !important;
+    gap: 8px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .mobile-menu-toggle {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 36px !important;
+    height: 36px !important;
+    min-width: 36px !important;
+    font-size: 1.25rem !important;
+    background: transparent !important;
+    border: none !important;
+    color: var(--text-primary) !important;
+    cursor: pointer !important;
+    padding: 0 !important;
+    flex-shrink: 0 !important;
+    margin: 0 !important;
+  }
+
+  .brand-logo-wrap {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex: 1 1 auto !important;
+    max-width: calc(100% - 130px) !important;
+    text-align: center !important;
+    overflow: hidden !important;
+    margin: 0 auto !important;
+  }
+
+  .brand-logo-wrap .custom-logo-link,
+  .brand-logo-wrap .brand-logo {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin: 0 !important;
+  }
+
+  .brand-logo-wrap img.custom-logo,
+  .brand-logo-wrap img.site-logo-img,
+  .brand-logo img {
+    max-height: 28px !important;
+    max-width: 140px !important;
+    width: auto !important;
+    height: auto !important;
+    object-fit: contain !important;
+    margin: 0 auto !important;
+    display: block !important;
+  }
+
+  /* Fallback text if logo image is not present */
+  .brand-logo .brand-title {
+    font-size: 1.05rem !important;
+    letter-spacing: 0.02em !important;
+    white-space: nowrap !important;
+  }
+  .brand-logo .logo-tag {
+    display: none !important;
+  }
+
+  .header-search-wrap {
+    display: none !important;
+  }
+
+  .header-actions {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+    gap: 6px !important;
+    flex-shrink: 0 !important;
+    margin: 0 !important;
+  }
+
+  .header-actions .action-btn {
+    width: 34px !important;
+    height: 34px !important;
+    min-width: 34px !important;
+    font-size: 0.95rem !important;
+    padding: 0 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background: transparent !important;
+    border-radius: 50% !important;
+  }
+
+  /* Hide wishlist and account on top header since they exist in drawer */
+  .header-actions a[href*="wishlist"],
+  .header-actions a[href*="account"],
+  .header-actions a[title*="Wishlist"],
+  .header-actions a[title*="Account"],
+  .header-actions a[aria-label*="Wishlist"],
+  .header-actions a[aria-label*="Account"] {
+    display: none !important;
+  }
+
+  .cart-header-cta {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 4px !important;
+    background-color: var(--color-charcoal) !important;
+    color: #ffffff !important;
+    padding: 0.32rem 0.6rem !important;
+    border-radius: 50px !important;
+    font-size: 0.75rem !important;
+    font-weight: 700 !important;
+    text-decoration: none !important;
+    flex-shrink: 0 !important;
+  }
+
+  .cart-header-cta span:not(.action-count-badge) {
+    display: none !important;
+  }
+
+  .cart-header-cta .action-count-badge {
+    position: static !important;
+    width: 16px !important;
+    height: 16px !important;
+    font-size: 0.62rem !important;
+    background-color: var(--color-gold) !important;
+    color: #1a1a1a !important;
+    border-radius: 50% !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin-left: 2px !important;
+  }
+
+  .nav-bar {
+    display: none !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-main {
+    height: 52px !important;
+    padding: 0 8px !important;
+    gap: 4px !important;
+  }
+
+  .mobile-menu-toggle {
+    width: 32px !important;
+    height: 32px !important;
+    min-width: 32px !important;
+    font-size: 1.1rem !important;
+  }
+
+  .brand-logo-wrap {
+    max-width: calc(100% - 110px) !important;
+  }
+
+  .brand-logo-wrap img.custom-logo,
+  .brand-logo-wrap img.site-logo-img,
+  .brand-logo img {
+    max-height: 24px !important;
+    max-width: 120px !important;
+  }
+
+  .header-actions .action-btn {
+    width: 30px !important;
+    height: 30px !important;
+    min-width: 30px !important;
+    font-size: 0.85rem !important;
+  }
+
+  .cart-header-cta {
+    padding: 0.28rem 0.48rem !important;
   }
 }
