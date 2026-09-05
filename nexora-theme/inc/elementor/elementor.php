@@ -42,9 +42,11 @@ class Nexora_Elementor_Extension {
     public function register_widgets( $widgets_manager ) {
         $widget_files = array(
             'hero-slider.php'         => 'Nexora_Elementor_Hero_Slider',
-            'products-grid.php'       => 'Nexora_Elementor_Products_Grid',
+            'value-props.php'         => 'Nexora_Elementor_Value_Props',
             'categories-showcase.php' => 'Nexora_Elementor_Categories_Showcase',
+            'products-grid.php'       => 'Nexora_Elementor_Products_Grid',
             'flash-deals.php'         => 'Nexora_Elementor_Flash_Deals',
+            'promo-banners.php'       => 'Nexora_Elementor_Promo_Banners',
             'editorial-blog.php'      => 'Nexora_Elementor_Editorial_Blog',
             'testimonials.php'        => 'Nexora_Elementor_Testimonials',
         );
