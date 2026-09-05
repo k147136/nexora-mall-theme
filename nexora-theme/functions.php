@@ -177,3 +177,9 @@ function nexora_auto_template_include( $template ) {
 add_filter( 'template_include', 'nexora_auto_template_include', 99 );
 
 require_once NEXORA_DIR . '/inc/theme-options.php';
+
+// Ensure Elementor support for pages and posts
+add_action( 'init', function() {
+    add_post_type_support( 'page', 'elementor' );
+    add_post_type_support( 'post', 'elementor' );
+} );
