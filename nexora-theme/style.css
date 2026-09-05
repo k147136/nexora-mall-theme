@@ -2639,3 +2639,238 @@ h1, h2, h3, h4, h5, h6 {
     padding: 0.35rem 0.55rem !important;
   }
 }
+
+
+/* ==========================================================================
+   PERFECT MOBILE HEADER & ZERO-OVERFLOW SYSTEM
+   ========================================================================== */
+
+/* 1. Global Overflow Prevention */
+html, body {
+  overflow-x: hidden !important;
+  width: 100% !important;
+  max-width: 100vw !important;
+  position: relative !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  box-sizing: border-box !important;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box !important;
+}
+
+/* 2. Desktop/Mobile Header Toggle */
+@media (min-width: 992px) {
+  .mobile-menu-toggle {
+    display: none !important;
+  }
+}
+
+/* 3. Mobile & Tablet Header (< 992px) */
+@media (max-width: 991px) {
+  .announcement-bar {
+    width: 100% !important;
+    padding: 0.35rem 0.5rem !important;
+  }
+  .announcement-inner {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center !important;
+    width: 100% !important;
+    padding: 0 !important;
+  }
+  .announcement-inner > div:first-child {
+    justify-content: center !important;
+    font-size: 0.72rem !important;
+    line-height: 1.3 !important;
+  }
+  .announcement-links {
+    display: none !important;
+  }
+
+  .site-header {
+    width: 100% !important;
+    max-width: 100vw !important;
+    overflow-x: hidden !important;
+  }
+
+  .header-main {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    height: 58px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 0.65rem !important;
+    margin: 0 !important;
+    gap: 0.35rem !important;
+    box-sizing: border-box !important;
+  }
+
+  .mobile-menu-toggle {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 36px !important;
+    height: 36px !important;
+    min-width: 36px !important;
+    font-size: 1.15rem !important;
+    background: transparent !important;
+    border: none !important;
+    color: var(--text-primary) !important;
+    cursor: pointer !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    flex-shrink: 0 !important;
+  }
+
+  .brand-logo {
+    display: inline-flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    justify-content: center !important;
+    text-decoration: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    flex: 1 1 auto !important;
+    max-width: calc(100% - 130px) !important;
+    overflow: hidden !important;
+  }
+
+  .brand-title {
+    font-family: var(--font-heading) !important;
+    font-size: 1.2rem !important;
+    font-weight: 900 !important;
+    letter-spacing: 0.02em !important;
+    line-height: 1.05 !important;
+    color: var(--text-primary) !important;
+    white-space: nowrap !important;
+    display: inline-block !important;
+  }
+
+  .brand-logo .logo-tag {
+    font-family: var(--font-body) !important;
+    font-size: 0.45rem !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.12em !important;
+    color: var(--color-gold) !important;
+    margin-top: 1px !important;
+    line-height: 1 !important;
+    white-space: nowrap !important;
+    display: block !important;
+  }
+
+  .header-search-wrap {
+    display: none !important;
+  }
+
+  .header-actions {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+    gap: 0.3rem !important;
+    flex-shrink: 0 !important;
+    margin: 0 !important;
+  }
+
+  .header-actions .action-btn {
+    width: 32px !important;
+    height: 32px !important;
+    min-width: 32px !important;
+    font-size: 0.9rem !important;
+    padding: 0 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background: transparent !important;
+    border-radius: 50% !important;
+  }
+
+  /* Wishlist & Account on mobile header */
+  .header-actions a[href*="wishlist"],
+  .header-actions a[href*="account"],
+  .header-actions a[title*="Wishlist"],
+  .header-actions a[title*="Account"],
+  .header-actions a[aria-label*="Wishlist"],
+  .header-actions a[aria-label*="Account"] {
+    display: none !important;
+  }
+
+  .cart-header-cta {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 0.3rem !important;
+    background-color: var(--color-charcoal) !important;
+    color: #ffffff !important;
+    padding: 0.35rem 0.6rem !important;
+    border-radius: 50px !important;
+    font-size: 0.75rem !important;
+    font-weight: 700 !important;
+    text-decoration: none !important;
+    flex-shrink: 0 !important;
+  }
+
+  .cart-header-cta span:not(.action-count-badge) {
+    display: none !important;
+  }
+
+  .cart-header-cta .action-count-badge {
+    position: static !important;
+    width: 17px !important;
+    height: 17px !important;
+    font-size: 0.62rem !important;
+    background-color: var(--color-gold) !important;
+    color: #1a1a1a !important;
+    border-radius: 50% !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin-left: 2px !important;
+  }
+
+  .nav-bar {
+    display: none !important;
+  }
+}
+
+/* 4. Extra Small Mobile Phones (< 380px) */
+@media (max-width: 380px) {
+  .header-main {
+    height: 52px !important;
+    padding: 0 0.4rem !important;
+    gap: 0.2rem !important;
+  }
+
+  .mobile-menu-toggle {
+    width: 30px !important;
+    height: 30px !important;
+    min-width: 30px !important;
+    font-size: 1rem !important;
+  }
+
+  .brand-logo {
+    max-width: calc(100% - 105px) !important;
+  }
+
+  .brand-title {
+    font-size: 1.05rem !important;
+  }
+
+  .brand-logo .logo-tag {
+    font-size: 0.4rem !important;
+  }
+
+  .header-actions .action-btn {
+    width: 28px !important;
+    height: 28px !important;
+    min-width: 28px !important;
+    font-size: 0.8rem !important;
+  }
+
+  .cart-header-cta {
+    padding: 0.3rem 0.45rem !important;
+  }
+}
