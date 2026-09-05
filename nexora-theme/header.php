@@ -33,9 +33,15 @@
             <i class="fas fa-bars"></i>
         </button>
 
-                <!-- Luxury Brand Logo -->
+                        <!-- Luxury Brand Logo -->
         <div class="brand-logo-wrap">
-            <?php if ( function_exists( 'has_custom_logo' ) && has_custom_logo() ) : ?>
+            <?php
+            $opt_logo = function_exists('nexora_get_option') ? nexora_get_option('logo_url') : '';
+            if ( ! empty( $opt_logo ) ) : ?>
+                <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="brand-logo custom-logo-link" rel="home" aria-label="<?php esc_attr_e( 'NEXORA MALL Homepage', 'nexora-mall' ); ?>">
+                    <img src="<?php echo esc_url( $opt_logo ); ?>" alt="<?php bloginfo( 'name' ); ?>" class="custom-logo site-logo-img" />
+                </a>
+            <?php elseif ( function_exists( 'has_custom_logo' ) && has_custom_logo() ) : ?>
                 <?php the_custom_logo(); ?>
             <?php else : ?>
                 <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="brand-logo custom-logo-link" rel="home" aria-label="<?php esc_attr_e( 'NEXORA MALL Homepage', 'nexora-mall' ); ?>">
